@@ -1,4 +1,5 @@
-import { ArrowRight, Code, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import logo from "@/images/logo.png";
 import Link from "next/link";
 
 import ContactForm from "@/components/contact-form";
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-2">
-              <Code className="h-6 w-6" />
+              <Image src={logo} alt="Haydn Morris" width={32} height={32} />
               <span className="inline-block font-bold">Haydn Morris</span>
             </Link>
             <nav className="flex gap-6">
@@ -117,8 +118,8 @@ export default function Home() {
               I&apos;m a passionate product engineer with over 8 years of
               experience building all kinds of digital products. I believe that
               you can only build the right tech if you understand the business
-              and the user, and I&apos;m passionate about using technology to
-              solve real-world problems.
+              and the user, and I use this approach to deliver digital solutions
+              which create real value and impact.
             </p>
             {/* <div className="mt-6 flex flex-wrap justify-center gap-4">
               <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
@@ -146,7 +147,7 @@ export default function Home() {
         >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
-              My Projects
+              Projects
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               Here are some of the projects I&apos;ve worked on. Each project
@@ -169,7 +170,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Planning back-office"
-              description="Built a back-office planning tool for energy-saving installations, reducing planning time and process complexity"
+              description="Built a back-office planning environment for installers of energy-saving products, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
             />
