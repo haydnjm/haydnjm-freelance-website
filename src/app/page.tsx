@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-container">
-        <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-6 md:gap-10">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
               <Image src={logo} alt="Haydn Morris" width={32} height={32} />
               <span className="inline-block font-bold">Haydn Morris</span>
             </Link>
-            <nav className="flex gap-6">
+            <nav className="hidden md:flex gap-6">
               <Link
                 href="#about"
                 className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
@@ -47,22 +47,27 @@ export default function Home() {
               </Link>
             </nav>
           </div>
-          <div className="flex flex-1 items-center justify-end space-x-4 max-w-2xl mx-auto">
-            <nav className="flex items-center space-x-2">
-              <Link href={GITHUB} target="_blank" rel="noreferrer">
-                <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </div>
-              </Link>
-              <Link href={LINKEDIN} target="_blank" rel="noreferrer">
-                <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </div>
-              </Link>
-            </nav>
-          </div>
+          <nav className="flex items-center gap-2">
+            <Link
+              href="#contact"
+              className="md:hidden flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary mr-2"
+            >
+              <Mail className="h-5 w-5" />
+              <span className="sr-only">Contact</span>
+            </Link>
+            <Link href={GITHUB} target="_blank" rel="noreferrer">
+              <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </div>
+            </Link>
+            <Link href={LINKEDIN} target="_blank" rel="noreferrer">
+              <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </div>
+            </Link>
+          </nav>
         </div>
       </header>
       <main className="flex-1">
