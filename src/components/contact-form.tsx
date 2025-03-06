@@ -48,6 +48,8 @@ export default function ContactForm() {
     try {
       await sendMessageEmail(values.name, values.email, values.message);
 
+      window.umami?.track("Contact message");
+
       form.reset();
       toast.success("Message sent!", {
         description: "Thank you for your message. I'll get back to you soon.",

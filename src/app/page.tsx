@@ -95,7 +95,11 @@ export default function Home() {
                   href="https://materials.haydnjm.com/Haydn%20Morris%20-%20Freelance%20software%20engineer.pdf"
                   download
                 >
-                  <Button variant="outline" size="lg">
+                  <Button
+                    data-umami-event="CV download"
+                    variant="outline"
+                    size="lg"
+                  >
                     <Download className="h-4 w-4" /> Download my CV
                   </Button>
                 </a>
