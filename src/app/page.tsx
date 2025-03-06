@@ -10,7 +10,7 @@ import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
 import solarPanels from "@/images/solar-panels-min.jpg";
 import splash from "@/images/splash-faded.png";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -89,11 +89,16 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                {/* <Link href="#projects">
-                  <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" asChild>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://materials.haydnjm.com/Haydn%20Morris%20-%20Freelance%20software%20engineer.pdf"
+                    download
+                  >
                     <Download className="h-4 w-4" /> Download my CV
-                  </Button>
-                </Link> */}
+                  </a>
+                </Button>
               </div>
             </div>
             <div className="flex items-center justify-center lg:justify-end">
