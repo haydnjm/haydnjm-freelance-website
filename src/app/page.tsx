@@ -84,27 +84,27 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="#contact">
-                  <Button size="lg">
+                  <Button size="lg" className="md:w-full">
                     Get in Touch
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" asChild>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://materials.haydnjm.com/Haydn%20Morris%20-%20Freelance%20software%20engineer.pdf"
-                    download
-                  >
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://materials.haydnjm.com/Haydn%20Morris%20-%20Freelance%20software%20engineer.pdf"
+                  download
+                >
+                  <Button variant="outline" size="lg">
                     <Download className="h-4 w-4" /> Download my CV
-                  </a>
-                </Button>
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="flex items-center justify-center lg:justify-end">
-              <div className="relative h-[350px] w-[350px] rounded-full bg-gradient-to-b from-primary/20 to-primary/0 p-4">
+              <div className="relative h-[225px] w-[225px] sm:h-[350px] sm:w-[350px] rounded-full bg-gradient-to-b from-primary/20 to-primary/0 p-4">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-[300px] w-[300px] overflow-hidden rounded-full bg-muted">
+                  <div className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] overflow-hidden rounded-full bg-muted">
                     <Image
                       src={splash}
                       alt="Developer portrait"
@@ -171,13 +171,13 @@ export default function Home() {
             />
             <ProjectCard
               title="NFC locking PoC"
-              description="Conducted a research project into the feasibility of incorporating additional hardware products into the company's total offering"
+              description="Conducted a technical research project into the feasibility of incorporating additional NFC-based hardware products into a company's offering"
               tags={[]}
               image={smartLock}
             />
             <ProjectCard
               title="Metadata ingestion microservice"
-              description="Built a high-availability ingestion service to process MQTT messages"
+              description="Built a high-availability metadata ingestion service to high volumes of MQTT messages"
               tags={["Go", "MQTT", "Pubsub", "Grafana"]}
               image={metadata}
             />

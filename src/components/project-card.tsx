@@ -50,18 +50,20 @@ export default function ProjectCard({
           )}
         </div>
       </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
-      <CardFooter>
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <Badge key={tag} variant="secondary">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </CardFooter>
+      <div className="flex flex-col flex-1 justify-between">
+        <CardContent>
+          <p className="text-muted-foreground">{description}</p>
+        </CardContent>
+        <CardFooter>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Badge key={tag} variant="secondary">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </CardFooter>
+      </div>
     </Card>
   );
 }
