@@ -1,20 +1,18 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import logo from "@/images/logo.png";
-import Link from "next/link";
-
 import ContactForm from "@/components/contact-form";
 import ProjectCard from "@/components/project-card";
 import { Button } from "@/components/ui/button";
+import { EMAIL, GITHUB, LINKEDIN } from "@/constants";
 import elt from "@/images/elt-min.jpg";
 import filmCam from "@/images/film-cam-min.jpg";
+import logo from "@/images/logo.png";
 import metadata from "@/images/metadata-min.jpg";
 import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
 import solarPanels from "@/images/solar-panels-min.jpg";
 import splash from "@/images/splash-faded.png";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-
-import { EMAIL, GITHUB, LINKEDIN } from "../constants";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -79,9 +77,9 @@ export default function Home() {
                   Turning Ideas Into Digital Reality
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  I specialise in bridging the gap between product vision and
-                  technical execution, helping businesses build products that
-                  users love and engineers can maintain.
+                  I&apos;m a freelance software engineer based in Amsterdam. I
+                  specialise in bridging the gap between product vision and
+                  technical execution.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -114,35 +112,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="p-container py-12 md:py-24 lg:py-32">
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+        <section
+          id="about"
+          className="p-container py-12 md:py-24 lg:py-32 relative overflow-hidden "
+        >
+          <div className="flex flex-col items-center justify-center gap-4 mx-auto p-6 rounded-lg max-w-[58rem] text-center relative z-10 backdrop-blur-[8px] backdrop-filter">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
               About Me
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              I&apos;m a passionate product engineer with over 8 years of
-              experience building all kinds of digital products. I believe that
-              you can only build the right tech if you understand the business
-              and the user, and I use this approach to deliver digital solutions
-              which create real value and impact.
+              As well as an engineer, I&apos;m a passionate product manager with
+              over 8 years of experience building all kinds of digital products.
+              I believe that you can only build the right tech if you understand
+              the business and the user, and I use this approach to deliver
+              digital solutions which create real value and impact.
             </p>
-            {/* <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
-                <span className="font-medium">React</span>
-              </div>
-              <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
-                <span className="font-medium">Next.js</span>
-              </div>
-              <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
-                <span className="font-medium">TypeScript</span>
-              </div>
-              <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
-                <span className="font-medium">Tailwind CSS</span>
-              </div>
-              <div className="flex items-center justify-center rounded-md border border-muted bg-muted/50 px-4 py-2">
-                <span className="font-medium">Node.js</span>
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -175,7 +159,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Planning back-office"
-              description="Built a back-office planning environment for installers of energy-saving products, reducing planning time and process complexity"
+              description="Built a back-office planning application for installers of energy-saving products, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
             />
@@ -245,7 +229,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t py-6 md:py-0">
+      <footer className="border-t py-6 md:py-0 px-container">
         <div className="flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Haydn Morris. All rights reserved.
