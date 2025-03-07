@@ -244,7 +244,7 @@ export default function Home() {
           <p>
             &copy; {new Date().getFullYear()} Haydn Morris. All rights reserved.
           </p>
-          <p>+31 6 40 46 66 45 | hello@haydnjm.com</p>
+          <p>+31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96610755</p>
           {/* <nav className="flex gap-4 sm:gap-6">
             <Link
               href="#"
