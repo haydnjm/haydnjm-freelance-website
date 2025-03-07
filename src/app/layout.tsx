@@ -30,8 +30,8 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" && (
         <Script
           defer
-          src="http://umami-mwsscsc8g088g04kcow4kw0c.188.245.155.162.sslip.io/script.js"
-          data-website-id="30d83210-7ebe-4d32-8db6-96650a8a5e77"
+          src="https://umami.apps.haydnjm.com/script.js"
+          data-website-id="93f88c6a-c263-41bf-b46d-6cec85bd3289"
         />
       )}
       <body
