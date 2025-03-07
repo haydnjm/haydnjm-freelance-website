@@ -1,10 +1,9 @@
 import ContactForm from "@/components/contact-form";
 import ProjectCard from "@/components/project-card";
 import { Button } from "@/components/ui/button";
-import { EMAIL, GITHUB, LINKEDIN } from "@/constants";
+import { EMAIL } from "@/constants";
 import elt from "@/images/elt-min.jpg";
 import filmCam from "@/images/film-cam-min.jpg";
-import logo from "@/images/logo.png";
 import metadata from "@/images/metadata-min.jpg";
 import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
@@ -16,58 +15,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-container">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src={logo} alt="Haydn Morris" width={32} height={32} />
-              <span className="inline-block font-bold">Haydn Morris</span>
-            </Link>
-            <nav className="hidden md:flex gap-6">
-              <Link
-                href="#about"
-                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                About
-              </Link>
-              <Link
-                href="#projects"
-                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#contact"
-                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                Contact
-              </Link>
-            </nav>
-          </div>
-          <nav className="flex items-center gap-2">
-            <Link
-              href="#contact"
-              className="md:hidden flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary mr-2"
-            >
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Contact</span>
-            </Link>
-            <Link href={GITHUB} target="_blank" rel="noreferrer">
-              <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link href={LINKEDIN} target="_blank" rel="noreferrer">
-              <div className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </div>
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <div>
       <main className="flex-1">
         <section id="hero" className="p-container py-24 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 max-w-5xl mx-auto">
@@ -125,7 +73,7 @@ export default function Home() {
           id="about"
           className="p-container py-12 md:py-24 lg:py-32 relative overflow-hidden "
         >
-          <div className="flex flex-col items-center justify-center gap-4 mx-auto p-6 rounded-lg max-w-[58rem] text-center relative z-10 backdrop-blur-[8px] backdrop-filter">
+          <div className="flex flex-col items-center justify-center gap-4 mx-auto p-6 rounded-lg max-w-5xl text-center relative z-10 backdrop-blur-[8px] backdrop-filter">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
               About Me
             </h2>
@@ -144,7 +92,7 @@ export default function Home() {
           id="projects"
           className="p-container py-12 md:py-24 lg:py-32 bg-muted/50"
         >
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+          <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
               Projects
             </h2>
@@ -160,6 +108,7 @@ export default function Home() {
               description="Built an end-to-end business intelligence stack enabling data driven decision making"
               tags={["dbt", "Fivetran", "BigQuery", "Tableau"]}
               image={elt}
+              link="/case-studies/bi-stack"
             />
             <ProjectCard
               title="Security on the edge"
@@ -169,9 +118,10 @@ export default function Home() {
             />
             <ProjectCard
               title="Planning back-office"
-              description="Built a back-office planning application for installers of energy-saving products, reducing planning time and process complexity"
+              description="A back-office planning application for installation teams, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
+              link="/case-studies/planning-environment"
             />
             <ProjectCard
               title="NFC locking PoC"
@@ -195,7 +145,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="p-container py-12 md:py-24 lg:py-32">
-          <div className="mx-auto grid max-w-[58rem] gap-4 md:grid-cols-2">
+          <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
                 Let&apos;s Work Together
@@ -239,27 +189,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t py-6 md:py-0 px-container">
-        <div className="flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Haydn Morris. All rights reserved.
-          </p>
-          {/* <nav className="flex gap-4 sm:gap-6">
-            <Link
-              href="#"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Terms
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Privacy
-            </Link>
-          </nav> */}
-        </div>
-      </footer>
     </div>
   );
 }

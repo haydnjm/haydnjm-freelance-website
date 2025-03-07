@@ -1,0 +1,51 @@
+import Image from 'next/image'
+import biStackCover from '@/app/case-studies/bi-stack/analysis-min.jpg'
+import flow from '@/app/case-studies/bi-stack/bi-flow.png'
+
+<Image
+  src={biStackCover}
+  alt="Modern data stack visualization"
+  className="w-full"
+  priority
+/>
+
+# Building a Modern Data Stack: From Spreadsheets to Scalable Insights
+### dbt, Fivetran, big query, tableau
+#### SQL, MongoDB, MailChimp, Exact, Google Analytics
+
+>### tl;dr
+>I built an **integrated data platform** using modern tools spanning from **ingestion** of various data sources, to **warehousing** and **transformation** of the data, and finally visualising insights via **dashboards**.
+
+## The problem
+Before implementing a business intelligence (BI) stack, the client relied entirely on spreadsheets for data analysis. This meant directors and managers spent countless hours manually copying and pasting data, writing formulas in Google Sheets, and wrestling with version control issues—time that could have been better spent on strategic decision-making.
+
+With the cooperation of the stakeholders of the project I conducted a research spike to identify the ideal tooling flow for the client, considering the in-house technical expertise available, existing infrastructure, and budget constraints. 
+
+Some of the aspects that I was optimising for were:
+- The company was using GCP for a lot of their infrastructure. Tools within or easily integrated with GCP would be preferred.
+- There were few data literate people within the company, meaning that a limited group of experts would be using the tools.
+- The data was complex and described some pretty complex business processes, so the raw data was rife for misinterpretation.
+
+## The solution
+I opted to use the following tools:
+- **Fivetran** to ingest data from a variety of sources
+- **dbt** to create transformations that make the data usable by data analysts
+- **BigQuery** to warehouse the data
+- **Tableau** to create dashboards and insights
+
+<div>
+  <a href={flow.src} target="_blank" className="cursor-zoom-in">
+    <Image
+      src={flow}
+      alt="Modern data stack visualization"
+      className="w-full"
+    />
+  </a>
+  <p className="text-sm text-gray-500">Data flow diagram, showing how the data gets from source to chart</p>
+</div>
+
+After receiving buy in from the management team, I implemented the stack from end to end, working closely with the data analysts who would eventually be using the tools as part of their daily workflow. I prepared training materials and documentation to help them leverage the tools to their full potential.
+
+The result was a modern data architecture that streamlined reporting.
+
+With this new setup, managers and directors are no longer bogged down by data wrangling—they can now focus on steering the business forward, confident in the accuracy and accessibility of their data.
