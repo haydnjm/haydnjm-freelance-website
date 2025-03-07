@@ -107,11 +107,12 @@ export default function RootLayout({
             {children}
 
             <footer className="border-t py-6 md:py-0 px-container">
-              <div className="flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-                <p className="text-sm text-muted-foreground">
+              <div className="flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row text-sm text-muted-foreground">
+                <p>
                   &copy; {new Date().getFullYear()} Haydn Morris. All rights
                   reserved.
                 </p>
+                <p>+31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96610755</p>
                 {/* <nav className="flex gap-4 sm:gap-6">
             <Link
               href="#"
