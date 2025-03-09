@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import planningEnvironmentCover from '@/app/case-studies/planning-environment/planning-min.jpg'
+import BlogNav from '@/components/blog-nav'
+import ContactBanner from '@/components/contact-banner'
 
 <Image
   src={planningEnvironmentCover}
   alt="Planning environment visualization"
-  className="w-full"
+  className="object-cover aspect-video"
   priority
 />
 
@@ -15,7 +17,7 @@ import planningEnvironmentCover from '@/app/case-studies/planning-environment/pl
 >### tl;dr
 >I built a web app for planners managing teams of traveling technicians who install energy-saving products. It cut planning time by 35%.
 
-## The problem
+## problem
 Installing energy-saving products (think solar panels, heat pumps, insulation etc) in peoples houses is a complex process. It often requires one or more technical inspections of the house to ensure the work is possible, is subject to regulations, and is highly sensitive to supply chain issues.
 
 Planning teams need to have the key information about each job to hand, and tooling which allows them to manage their work with as few opportunities for human error as possible.
@@ -28,11 +30,19 @@ The process began by talking with the planners, many of whom were not highly tec
 
 I also created a set of mockups for a web-app which would allow them to manage their work. These mockups were then iterated on with the planners and installers to ensure they were easy to understand and use.
 
-## The solution
+## solution
 ### The front end
 I built a Next.js app with Rebase as a component library. By using Apollo GraphQL to fetch data from the backend, it was possible to create a fast, responsive UI with optimistic updates and extensive client-side caching.
 
 ### The back end
 There was a Node.js backend which exposed a GraphQL API. This made it easy to use and navigate around the complex web of information that is required to plan a job.
 
-As of April 2023, more than €2 million euros worth of work had been planned via the platform, and it had achieved a 35% reduction in planning time, relative to jobs that were planned outside of the application.
+## results
+As of April 2023, more than **€2 million euros worth of work** had been planned via the platform, and it had achieved a **35% reduction in planning time**, relative to jobs that were planned outside of the application.
+
+<ContactBanner />
+
+<BlogNav 
+  previous={{ title: "Security on the Edge", slug: "/case-studies/security-on-the-edge" }} 
+  next={{ title: "NFC Locking Proof of Concept", slug: "/case-studies/nfc-lock-poc" }}
+/>

@@ -1,10 +1,9 @@
-import React from "react";
-import "../globals.css";
+import ContactPopup from "@/components/contact-popup";
+import { Button } from "@/components/ui/button";
+import { GITHUB, LINKEDIN } from "@/constants";
 import type { Metadata } from "next";
-import { unstable_ViewTransition as ViewTransition } from "react";
-import { GITHUB, LINKEDIN } from "../../constants";
-import ContactPopup from "../../components/contact-popup";
-import { Button } from "../../components/ui/button";
+import React, { unstable_ViewTransition as ViewTransition } from "react";
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://haydnjm.com"),
@@ -28,14 +27,6 @@ export default function RootLayout({
       <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
         <main className="max-w-[60ch] mx-auto w-full space-y-6">
           <ViewTransition name="test">{children}</ViewTransition>
-          <ContactPopup>
-            <p>
-              Do you have a similar project in mind?
-              <Button variant="outline" className="ml-2">
-                Let&apos;s work together!
-              </Button>
-            </p>
-          </ContactPopup>
         </main>
         <Footer />
       </div>

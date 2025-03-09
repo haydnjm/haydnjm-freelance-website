@@ -30,7 +30,11 @@ const formSchema = z.object({
   }),
 });
 
-export default function ContactForm() {
+export default function ContactForm({
+  setModalOpen,
+}: {
+  setModalOpen?: (open: boolean) => void;
+}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -51,6 +55,7 @@ export default function ContactForm() {
       window.umami?.track("Contact message");
 
       form.reset();
+      setModalOpen?.(false);
       toast.success("Message sent!", {
         description: "Thank you for your message. I'll get back to you soon.",
       });

@@ -1,0 +1,48 @@
+import Image from 'next/image'
+import ZoomImage from '@/components/zoom-image'
+import BlogNav from '@/components/blog-nav'
+import cover from './metadata-min.jpg'
+import ContactBanner from '@/components/contact-banner'
+
+<Image
+  src={cover}
+  alt="Security cameras on a pole"
+  className="object-cover aspect-video"
+  priority
+/>
+
+# Metadata Ingestion Service
+### Go, MQTT, Pubsub
+#### Prometheus, Grafana
+
+>### tl;dr
+> I built a Go microservice to handle metadata ingestion from a fleet of remote devices. It processes over 3,000 messages per minute with an uptime exceeding 99.99%.
+
+## problem
+In the [Security on the Edge](/case-studies/security-on-the-edge) case study, I outline a system where lightweight detection information is transmitted from remote facilities to a cloud-based security system. This data needed to be ingested reliably to enable monitoring and alerting.
+The system had the following requirements:
+	•	It must handle high volumes of messages concurrently.
+	•	It must process messages of varying sizes.
+	•	It must accommodate messages with different latencies.
+	•	It must be easy to monitor the service’s health and respond quickly to issues.
+
+## solution
+I opted for the following technology stack:
+#### Go
+The microservice was written in Go due to its performance and ability to efficiently handle concurrent tasks.
+#### GCP Pub/Sub
+After parsing and evaluating the messages, the detection information was published to a GCP Pub/Sub topic for processing by the next service in the pipeline. I chose GCP Pub/Sub for its reliability and seamless integration with the rest of the system.
+#### Prometheus & Grafana
+I recorded metrics using Prometheus and used Grafana to visualize the system’s health and dependencies. Prometheus was chosen for its ability to efficiently handle event-based metrics and telemetry.
+
+MQTT was the chosen protocol for metadata transfer, a decision made prior to the project’s start.
+
+## results
+The microservice successfully handled the system’s load with an uptime exceeding 99.99%, even on relatively low-spec cluster nodes.
+
+<ContactBanner />
+
+<BlogNav 
+  previous={{ title: "NFC Lock POC", slug: "/case-studies/nfc-lock-poc" }} 
+  next={{ title: "James Broad Media", slug: "/case-studies/james-broad-media" }}
+/>

@@ -115,9 +115,10 @@ export default function Home() {
               description="Deployed a fleet of Nvidia Jetson computers for ML-on-the-edge security camera monitoring"
               tags={["Python", "Deepstream", "AWS Greengrass", "Docker"]}
               image={securityCam}
+              link="/case-studies/security-on-the-edge"
             />
             <ProjectCard
-              title="Planning back-office"
+              title="Installation planning application"
               description="A back-office planning application for installation teams, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
@@ -128,18 +129,21 @@ export default function Home() {
               description="Conducted a technical research project into the feasibility of incorporating additional NFC-based hardware products into a company's offering"
               tags={[]}
               image={smartLock}
+              link="/case-studies/nfc-lock-poc"
             />
             <ProjectCard
               title="Metadata ingestion microservice"
               description="Built a high-availability metadata ingestion service to high volumes of MQTT messages"
               tags={["Go", "MQTT", "Pubsub", "Grafana"]}
               image={metadata}
+              link="/case-studies/metadata-ingestion-service"
             />
             <ProjectCard
               title="Media outreach website"
               description="Personal branding website for a celebrity antiques dealer based in the UK"
               tags={["Typescript", "Astro", "Tailwind", "Vercel"]}
               image={filmCam}
+              link="/case-studies/james-broad-media"
             />
           </div>
         </section>

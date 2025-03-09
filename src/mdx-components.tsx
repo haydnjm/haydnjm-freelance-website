@@ -25,7 +25,7 @@ const components = {
     />
   ),
   h4: (props: HeadingProps) => (
-    <h4 className="font-medium text-gray-500 text-xs" {...props} />
+    <h4 className="font-medium text-gray-500 text-xs mb-6" {...props} />
   ),
   p: (props: ParagraphProps) => (
     <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />

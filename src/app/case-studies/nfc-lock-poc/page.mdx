@@ -1,0 +1,47 @@
+import Image from 'next/image'
+import ZoomImage from '@/components/zoom-image'
+import BlogNav from '@/components/blog-nav'
+import lock from './lock.webp'
+import ContactBanner from '@/components/contact-banner'
+
+<Image
+  src={lock}
+  alt="Digital lock"
+  className="object-cover aspect-video"
+  priority
+/>
+
+# NFC Locking Proof of Concept
+
+>### tl;dr
+>I conducted an in-depth technical investigation into the feasibility of integrating an NFC lock into a client's existing hardware offering. They dodged a bullet.
+
+## problem
+A previous employer of mine has a portfolio of IoT products, which they sell B2B. These products require a power supply. While this greatly expands their potential feature set, it also significantly increases installation costs, as laying cabling is expensive.
+
+The company wanted to explore the feasibility of adding an NFC lock to their product range, as these devices do not require a power supply and can be installed in minutes by a non-technical person.
+
+Choosing the right product from the market for integration was crucial since switching later would be extremely costly.
+For the product to be successful, it needed to meet the following criteria:
+- It must be possible to interact with the hardware without using the vendor's proprietary mobile app.
+- It must integrate seamlessly with the existing cloud ecosystem.
+- It must support logging and telemetry to track usage.
+- The vendor's SDKs and APIs must be well-documented and easy to use.
+The company identified a potential product but wanted to ensure it was a good fit for their product range.
+
+## solution
+With the help of the talented mobile developer [Dan Pina](https://duclearc.com), I conducted an in-depth technical investigation of a potential hardware vendor. We created a technical proof of concept to demonstrate how the product would integrate with the existing infrastructure and mapped out the core components of the main user flow.
+
+We built a cloud integration that allowed the provisioning of the hardware into the existing infrastructure.
+
+We also developed a Swift mobile app capable of downloading the necessary information from the cloud to interact with the hardware.
+
+## results
+Alongside the applications and services we built, we created a comprehensive technical report outlining our findings, including the strengths and weaknesses of the potential hardware vendor.
+For various reasons, we concluded that the vendor was not a good fit for the company, both technically and commercially. Convinced by our analysis, management decided to cancel the expensive alpha test they had planned, saving significant time and money. This allowed efforts to be redirected toward finding a more suitable partner.
+
+<ContactBanner />
+<BlogNav 
+  previous={{ title: "Installation planning application", slug: "/case-studies/planning-environment" }} 
+  next={{ title: "Metadata ingestion service", slug: "/case-studies/metadata-ingestion-service" }}
+/>

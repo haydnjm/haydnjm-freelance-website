@@ -1,0 +1,45 @@
+import Image from 'next/image'
+import cover from './cover.png'
+import lighthouse from './lighthouse.png'
+import BlogNav from '@/components/blog-nav'
+import ContactBanner from '@/components/contact-banner'
+
+<Image
+  src={cover}
+  alt="James Broad"
+  className="object-cover object-left aspect-video"
+  priority
+/>
+
+# James Broad Media: Online Profile
+### Figma, Astro, Tailwind, TypeScript
+#### Vercel, Google Analytics, React, Cloudflare
+
+>### tl;dr
+>I created a media profile website for antiques dealer and TV personality James Broad. It scores 100 across the board in Google's Lighthouse
+
+## problem
+James Broad is an antiques dealer and TV personality. Over the last few years he has been increasing his online presence and is focussing increasingly on his TV work.
+
+He wanted a website which showcased his television work, enabled media companies to get in contact regarding further television opportunities, and allowed his audience to get to know him a bit better.
+
+## solution
+We worked together using Figma to create an interactive mockup that was simple and clean, but that also allowed him to put his unique personality across.
+
+When we were happy with the design, I implemented it using Astro and Tailwind (with Typescript) and deployed it on Vercel. I also integrated Google Analytics to allow him to track the success of his website, especially during TV appearances.
+
+## results
+The website scores 100 across the board in Google's Lighthouse and ranks #1 for James's name on Google despite his heavily active social media presence.
+
+<Image
+  src={lighthouse}
+  alt="James Broad Media lighthouse Score"
+  className="mx-auto w-[300px]"
+  priority
+/>
+
+<ContactBanner />
+
+<BlogNav 
+  previous={{ title: "Metadata Ingestion Service", slug: "/case-studies/metadata-ingestion-service" }} 
+/>
