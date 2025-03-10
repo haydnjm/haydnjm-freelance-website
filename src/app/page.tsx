@@ -103,7 +103,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-8">
             <ProjectCard
-              title="Business Intelligence Platform"
+              title="Business intelligence platform"
               description="Built an end-to-end business intelligence stack enabling data driven decision making"
               tags={["dbt", "Fivetran", "BigQuery", "Tableau"]}
               image={elt}
