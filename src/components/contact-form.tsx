@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { sendMessageEmail } from "../actions/submit-message";
+import { usePathname } from "next/navigation";
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -36,6 +37,7 @@ export default function ContactForm({
   setModalOpen?: (open: boolean) => void;
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const pathname = usePathname();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,7 +54,9 @@ export default function ContactForm({
     try {
       await sendMessageEmail(values.name, values.email, values.message);
 
-      window.umami?.track("Contact message");
+      window.umami?.track("Contact message", {
+        path: pathname,
+      });
 
       form.reset();
       setModalOpen?.(false);
