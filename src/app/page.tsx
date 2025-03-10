@@ -118,7 +118,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Installation planning app"
-              description="A back-office planning application for installation teams, reducing planning time and process complexity"
+              description="Built a back-office planning application for installation teams, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
               link="/case-studies/planning-environment"
@@ -139,7 +139,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Media outreach website"
-              description="Personal branding website for a celebrity antiques dealer based in the UK"
+              description="Created a personal branding website for a celebrity antiques dealer based in the UK"
               tags={["Typescript", "Astro", "Tailwind", "Vercel"]}
               image={james}
               link="/case-studies/james-broad-media"
