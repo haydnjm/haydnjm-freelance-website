@@ -1,0 +1,55 @@
+import Image from 'next/image'
+import ZoomImage from '@/components/zoom-image'
+import camera from '@/app/case-studies/ai-on-the-edge/camera.jpg'
+import flow from '@/app/case-studies/ai-on-the-edge/flow.png'
+import BlogNav from '@/components/blog-nav'
+import ContactBanner from '@/components/contact-banner'
+
+<Image
+  src={camera}
+  alt="Security cameras on a pole"
+  className="object-cover aspect-video"
+  priority
+/>
+
+# AI on the Edge: Incident Detection in a Low-Bandwidth Environment
+### Python, Deepstream, AWS Greengrass, Docker
+#### G-Streamer, Tailscale, Kubernetes, SendGrid
+
+> tl;dr
+I deployed on-site hardware to analyse security camera data and generate alerts. This improved the reaction times of security operators to incidents from around 20 minutes to just a few seconds.
+
+## problem
+This project was defined by its physical infrastructure constraints. The customer operates a group of outdoor facilities where security cameras run 24/7. The issue is that these facilities are often in remote locations with poor internet connectivity.
+
+That makes it difficult to continuously stream video feeds from up to 60 cameras to a cloud-based security system. To monitor the facilities remotely, you would either need to view the streams in batches of a few at a time or select a subset of cameras to stream to a cloud-based security tool like Avigilon or Verkada.
+
+Either way, you risk missing important information, leaving the facilities vulnerable to theft or damage.
+
+## solution
+### obtaining detections
+In collaboration with ML engineer [Leon Müller](https://devleon.com), I developed an application to analyse the camera feeds and collect detection metadata for people and vehicles. The application was designed to run on (relatively) inexpensive hardware optimised for running machine learning models.
+
+We created a G-Streamer pipeline to manage the camera feeds and image data and used Nvidia's Deepstream to perform object detection and tracking on the feeds.
+
+The application then transmitted lightweight object detection metadata over MQTT to a [cloud ingestion service](/case-studies/metadata-ingestion-service), allowing detections for all cameras in the park to be streamed simultaneously. More data-intensive aspects of the detections, such as screen grabs from the cameras, were stored locally and could be accessed on demand, drastically reducing the load on the network.
+
+### managing rollouts
+Manually deploying to a fleet of remote hardware can be complex, time-consuming, and error-prone. I set up a deployment pipeline using AWS Greengrass, which enabled me to roll out new versions of the application to all remote hardware at once—at the click of a few buttons—as well as track the version histories of each device.
+
+<ZoomImage 
+  src={flow} 
+  alt="Flow diagram of security system" 
+  className="w-full" 
+  caption="Flow diagram of security system, showing how data flows from the cameras to the cloud" 
+/>
+
+## results
+The security team monitoring the facilities was able to respond to events in the park within seconds, whereas previously, it took around 20 minutes on average.
+
+<ContactBanner />
+
+<BlogNav 
+  previous={{ title: "Bi Stack", slug: "/case-studies/bi-stack" }} 
+  next={{ title: "Planning Environment", slug: "/case-studies/planning-environment" }}
+/>

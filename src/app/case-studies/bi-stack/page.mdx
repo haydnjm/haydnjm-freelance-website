@@ -7,7 +7,7 @@ import ContactBanner from '@/components/contact-banner'
 
 <Image
   src={biStackCover}
-  alt="Modern data stack visualization"
+  alt="Modern data stack visualisation"
   className="object-cover aspect-video"
   priority
 />
@@ -16,33 +16,41 @@ import ContactBanner from '@/components/contact-banner'
 ### dbt, Fivetran, big query, tableau
 #### SQL, MongoDB, MailChimp, Exact, Google Analytics
 
->### tl;dr
->I built an **integrated data platform** using modern tools spanning from **ingestion** of various data sources, to **warehousing** and **transformation** of the data, and finally visualising insights via **dashboards**.
+> ### tl;dr
+> I built an integrated data platform using modern tools, spanning from ingestion of various data sources to warehousing and transformation of the data, and finally, visualising insights via dashboards.
 
 ## problem
-Before implementing a business intelligence (BI) stack, the client relied entirely on spreadsheets for data analysis. This meant directors and managers spent countless hours manually copying and pasting data, writing formulas in Google Sheets, and wrestling with version control issues—time that could have been better spent on strategic decision-making.
+Prior to implementing the data platform, the company relied on spreadsheets for data analysis. This meant directors and managers spent countless hours manually copying and pasting data, writing formulas in Google Sheets, and wrestling with version control issues—time that could have been better spent on strategic decision-making.
 
-With the cooperation of the stakeholders of the project I conducted a research spike to identify the ideal tooling flow for the client, considering the in-house technical expertise available, existing infrastructure, and budget constraints. 
+With the cooperation of project stakeholders, I conducted a research spike to identify the ideal tooling flow for the client, considering in-house technical expertise, existing infrastructure, and budget constraints.
 
-Some of the aspects that I was optimising for were:
-- The company was using GCP for a lot of their infrastructure. Tools within or easily integrated with GCP would be preferred.
-- There were few data literate people within the company, meaning that a limited group of experts would be using the tools.
-- The data was complex and described some pretty complex business processes, so the raw data was rife for misinterpretation.
+Some of the key aspects I optimised for included:
+
+- The company was using GCP for much of its infrastructure. Tools within or easily integrated with GCP were preferred.
+- There were few data-literate employees in the company, meaning only a limited group of experts would be using the tools.
+- The data was complex and described intricate business processes, making raw data prone to misinterpretation.
 
 ## solution
 I opted to use the following tools:
-- **Fivetran** to ingest data from a variety of sources
-- **dbt** to create transformations that make the data usable by data analysts
-- **BigQuery** to warehouse the data
-- **Tableau** to create dashboards and insights
 
-<ZoomImage
-  src={flow}
-  alt="Modern data stack visualization"
-  caption="Data flow diagram, showing how the data gets from source to chart"
-/>
+### Data Ingestion
+I selected Fivetran to ingest data from a variety of sources. While this is a paid service it greatly outweighs the cost of developers' time to set up and maintain the necessary integrations.
 
-After receiving buy in from the management team, I implemented the stack from end to end, working closely with the data analysts who would eventually be using the tools as part of their daily workflow.
+### Data Transformation
+dbt is the de facto standard for data transformation. It allows the data analysts to write SQL transformations that are easy to understand and maintain.
+
+### Data Warehousing
+I opted for BigQuery to warehouse the data. This solution fits in well with the company's existing GCP infrastructure and is a powerful tool for the data analysts.
+
+### Data Visualization
+Tableau was selected for a couple of reasons:
+- The company already had some experience with using it
+- It is compatible with the hardware available to the company (i.e. on Macs, which PowerBI is not)
+- There was no need to democratise data analysis as small group people in the company would realistically be using the tools, so tools like Looker were not a good fit
+
+<ZoomImage src={flow} alt="Modern data stack visualisation" caption="Data flow diagram, showing how data moves from source to chart" />
+
+After securing buy-in from the management team, I implemented the stack end to end, working closely with the data analysts who would eventually use the tools in their daily workflow.
 
 I also prepared training materials and documentation to help the team leverage the tools to their full potential.
 
@@ -54,5 +62,5 @@ With this new setup, managers and directors are no longer bogged down by data wr
 <ContactBanner />
 
 <BlogNav 
-  next={{ title: "Security on the Edge", slug: "/case-studies/security-on-the-edge" }} 
+  next={{ title: "AI on the Edge", slug: "/case-studies/ai-on-the-edge" }} 
 />

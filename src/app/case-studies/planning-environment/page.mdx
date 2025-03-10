@@ -5,7 +5,7 @@ import ContactBanner from '@/components/contact-banner'
 
 <Image
   src={planningEnvironmentCover}
-  alt="Planning environment visualization"
+  alt="Planning environment visualisation"
   className="object-cover aspect-video"
   priority
 />
@@ -15,34 +15,38 @@ import ContactBanner from '@/components/contact-banner'
 #### Figma, Rebase, GraphQL, gRPC, Sendgrid, Kubernetes
 
 >### tl;dr
->I built a web app for planners managing teams of traveling technicians who install energy-saving products. It cut planning time by 35%.
+>I built a web app for planners managing teams of travelling technicians who install energy-saving products. It reduced planning time by 35%.
 
 ## problem
-Installing energy-saving products (think solar panels, heat pumps, insulation etc) in peoples houses is a complex process. It often requires one or more technical inspections of the house to ensure the work is possible, is subject to regulations, and is highly sensitive to supply chain issues.
+Installing energy-saving products (think solar panels, heat pumps, insulation, etc.) in people’s homes is a complex process. It often requires one or more technical inspections to ensure the work is feasible, is subject to regulations, and is highly sensitive to supply chain issues.
 
-Planning teams need to have the key information about each job to hand, and tooling which allows them to manage their work with as few opportunities for human error as possible.
+Planning teams need access to key information about each job, along with tools that allow them to manage their work while minimising opportunities for human error.
 
-The process began by talking with the planners, many of whom were not highly technical, but who had a wealth of experience and domain knowledge. From their feedback, a detailed set of user stories was created:
-- As a planner, I need to be able to see photos of the house so that I can assess that the right extra materials are included in the job.
+The process began with discussions with planners, many of whom were not highly technical but had extensive experience and domain knowledge. From their feedback, a detailed set of user stories was created:
+
+- As a planner, I need to be able to see photos of the house so that I can ensure the right extra materials are included in the job.
 - As a homeowner, I need to receive notifications about the progress of the job so that I can plan my day around the installation.
 - As an installer, I need a checklist of the items that need to be signed off so that I can ensure the job is completed to a high standard.
 - ...
 
-I also created a set of mockups for a web-app which would allow them to manage their work. These mockups were then iterated on with the planners and installers to ensure they were easy to understand and use.
+I also created a set of mock-ups for a web app that would allow planners to manage their work. These mock-ups were then iterated on with planners and installers to ensure they were intuitive and easy to use.
 
 ## solution
-### The front end
-I built a Next.js app with Rebase as a component library. By using Apollo GraphQL to fetch data from the backend, it was possible to create a fast, responsive UI with optimistic updates and extensive client-side caching.
+### the front end
+I built a Next.js app with Rebase as a component library. By using Apollo GraphQL to fetch data from the backend, I was able to create a fast, responsive UI with optimistic updates and extensive client-side caching.
 
-### The back end
-There was a Node.js backend which exposed a GraphQL API. This made it easy to use and navigate around the complex web of information that is required to plan a job.
+The platform allowed planners to manage the installation jobs, including in-depth job information, photos, and notifications. It also included comprehensive sign-off flows for each different type of job, ensuring that consistency and quality of work were maintained. It also allowed the installation company to collect important feedback from the customers, meaning that the company could continue to improve their services.
+
+
+### the back end
+The backend was a Typescript Node.js application that exposed a GraphQL API, making it easy to navigate the complex web of information required for job planning.
 
 ## results
-As of April 2023, more than **€2 million euros worth of work** had been planned via the platform, and it had achieved a **35% reduction in planning time**, relative to jobs that were planned outside of the application.
+As of April 2023, more than €2 million worth of work had been planned via the platform, and it had achieved a 35% reduction in planning time compared to jobs planned outside the application.
 
 <ContactBanner />
 
 <BlogNav 
-  previous={{ title: "Security on the Edge", slug: "/case-studies/security-on-the-edge" }} 
+  previous={{ title: "AI on the Edge", slug: "/case-studies/ai-on-the-edge" }} 
   next={{ title: "NFC Locking Proof of Concept", slug: "/case-studies/nfc-lock-poc" }}
 />

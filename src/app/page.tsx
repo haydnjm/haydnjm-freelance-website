@@ -111,11 +111,11 @@ export default function Home() {
               link="/case-studies/bi-stack"
             />
             <ProjectCard
-              title="Security on the edge"
+              title="AI on the Edge"
               description="Deployed a fleet of Nvidia Jetson computers for ML-on-the-edge security camera monitoring"
               tags={["Python", "Deepstream", "AWS Greengrass", "Docker"]}
               image={securityCam}
-              link="/case-studies/security-on-the-edge"
+              link="/case-studies/ai-on-the-edge"
             />
             <ProjectCard
               title="Installation planning application"

@@ -3,6 +3,7 @@ import ZoomImage from '@/components/zoom-image'
 import BlogNav from '@/components/blog-nav'
 import cover from './metadata-min.jpg'
 import ContactBanner from '@/components/contact-banner'
+import dashboard from './dash.png'
 
 <Image
   src={cover}
@@ -19,7 +20,7 @@ import ContactBanner from '@/components/contact-banner'
 > I built a Go microservice to handle metadata ingestion from a fleet of remote devices. It processes over 3,000 messages per minute with an uptime exceeding 99.99%.
 
 ## problem
-In the [Security on the Edge](/case-studies/security-on-the-edge) case study, I outline a system where lightweight detection information is transmitted from remote facilities to a cloud-based security system. This data needed to be ingested reliably to enable monitoring and alerting.
+In the [AI on the Edge](/case-studies/ai-on-the-edge) case study, I outline a system where lightweight detection information is transmitted from remote facilities to a cloud-based security system. This data needed to be ingested reliably to enable monitoring and alerting.
 The system had the following requirements:
 	•	It must handle high volumes of messages concurrently.
 	•	It must process messages of varying sizes.
@@ -28,17 +29,20 @@ The system had the following requirements:
 
 ## solution
 I opted for the following technology stack:
-#### Go
+### Go
 The microservice was written in Go due to its performance and ability to efficiently handle concurrent tasks.
-#### GCP Pub/Sub
+### GCP Pub/Sub
 After parsing and evaluating the messages, the detection information was published to a GCP Pub/Sub topic for processing by the next service in the pipeline. I chose GCP Pub/Sub for its reliability and seamless integration with the rest of the system.
-#### Prometheus & Grafana
-I recorded metrics using Prometheus and used Grafana to visualize the system’s health and dependencies. Prometheus was chosen for its ability to efficiently handle event-based metrics and telemetry.
+### Prometheus & Grafana
+I recorded metrics using Prometheus and used Grafana to visualise the system’s health and dependencies. Prometheus was chosen for its ability to efficiently handle event-based metrics and telemetry.
 
 MQTT was the chosen protocol for metadata transfer, a decision made prior to the project’s start.
 
 ## results
-The microservice successfully handled the system’s load with an uptime exceeding 99.99%, even on relatively low-spec cluster nodes.
+The microservice successfully handled the system’s load with an uptime exceeding 99.99%, even on a relatively low-spec cluster deployment. Extensive health reporting was set up with alerts for any issues.
+
+<ZoomImage src={dashboard} alt="Grafana dashboard" caption="Grafana dashboard showing the health of the metadata ingestion service" />
+
 
 <ContactBanner />
 
