@@ -1,5 +1,3 @@
-import ContactPopup from "@/components/contact-popup";
-import { Button } from "@/components/ui/button";
 import { GITHUB, LINKEDIN } from "@/constants";
 import type { Metadata } from "next";
 import React, { unstable_ViewTransition as ViewTransition } from "react";
