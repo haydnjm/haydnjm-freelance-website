@@ -3,7 +3,7 @@ import ProjectCard from "@/components/project-card";
 import { Button } from "@/components/ui/button";
 import { EMAIL } from "@/constants";
 import elt from "@/images/elt-min.jpg";
-import filmCam from "@/images/film-cam-min.jpg";
+import james from "@/images/james.png";
 import metadata from "@/images/metadata-min.jpg";
 import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
@@ -73,11 +73,11 @@ export default function Home() {
           id="about"
           className="p-container py-12 md:py-24 lg:py-32 relative overflow-hidden "
         >
-          <div className="flex flex-col items-center justify-center gap-4 mx-auto p-6 rounded-lg max-w-5xl text-center relative z-10 backdrop-blur-[8px] backdrop-filter">
+          <div className="max-w-5xl flex flex-col items-center justify-center gap-4 mx-auto p-6 text-center relative z-10">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
               About Me
             </h2>
-            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               I am an engineer and passionate product manager with more than
               eight years of experience building a wide range of digital
               products. I believe that truly effective technology comes from
@@ -97,14 +97,13 @@ export default function Home() {
               Projects
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Here are some of the projects I&apos;ve worked on. Each project
-              represents my commitment to quality, attention to detail, and
-              passion for creating exceptional digital experiences.
+              Each project represents my commitment to quality, attention to
+              detail, and passion for creating exceptional digital experiences.
             </p>
           </div>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-8">
             <ProjectCard
-              title="Business intelligence"
+              title="Business Intelligence Platform"
               description="Built an end-to-end business intelligence stack enabling data driven decision making"
               tags={["dbt", "Fivetran", "BigQuery", "Tableau"]}
               image={elt}
@@ -112,13 +111,13 @@ export default function Home() {
             />
             <ProjectCard
               title="AI on the Edge"
-              description="Deployed a fleet of Nvidia Jetson computers for ML-on-the-edge security camera monitoring"
+              description="Deployed a fleet of devices for ML-on-the-edge security camera monitoring"
               tags={["Python", "Deepstream", "AWS Greengrass", "Docker"]}
               image={securityCam}
               link="/case-studies/ai-on-the-edge"
             />
             <ProjectCard
-              title="Installation planning application"
+              title="Installation planning app"
               description="A back-office planning application for installation teams, reducing planning time and process complexity"
               tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
               image={solarPanels}
@@ -132,8 +131,8 @@ export default function Home() {
               link="/case-studies/nfc-lock-poc"
             />
             <ProjectCard
-              title="Metadata ingestion microservice"
-              description="Built a high-availability metadata ingestion service to high volumes of MQTT messages"
+              title="Metadata ingestion service"
+              description="Built a high-availability metadata ingestion service to process high volumes of MQTT messages"
               tags={["Go", "MQTT", "Pubsub", "Grafana"]}
               image={metadata}
               link="/case-studies/metadata-ingestion-service"
@@ -142,7 +141,7 @@ export default function Home() {
               title="Media outreach website"
               description="Personal branding website for a celebrity antiques dealer based in the UK"
               tags={["Typescript", "Astro", "Tailwind", "Vercel"]}
-              image={filmCam}
+              image={james}
               link="/case-studies/james-broad-media"
             />
           </div>
