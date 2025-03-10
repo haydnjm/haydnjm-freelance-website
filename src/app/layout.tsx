@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Haydn Morris, Freelance Product Engineer",
+  title: "Haydn Morris | Freelance Software Engineer",
   description:
     "Bridging the gap between product vision and technical execution. I help businesses build products that users love and engineers can maintain.",
 };
