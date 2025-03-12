@@ -37,7 +37,7 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" && (
         <Script
           defer
-          src="https://analytics.apps.haydnjm.com/script.js"
+          src="https://analytics.haydnjm.com/script.js"
           data-website-id="93f88c6a-c263-41bf-b46d-6cec85bd3289"
         />
       )}

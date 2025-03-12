@@ -12,7 +12,6 @@ import splash from "@/images/splash-faded.png";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ScrollAnimatedOffering from "../components/offering/scroll-animated-offering";
 import Offering from "../components/offering";
 
 export default function Home() {
