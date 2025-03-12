@@ -12,6 +12,8 @@ import splash from "@/images/splash-faded.png";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollAnimatedOffering from "../components/offering/scroll-animated-offering";
+import Offering from "../components/offering";
 
 export default function Home() {
   return (
@@ -80,11 +82,17 @@ export default function Home() {
             <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               I am an engineer and passionate product manager with more than
               eight years of experience building a wide range of digital
-              products. I believe that truly effective technology comes from
-              understanding both the business and the user. With this approach,
-              I create digital solutions that deliver real value and lasting
-              impact.
+              products. I believe that truly effective digital solutions come
+              from understanding the business and the user as much as from
+              understanding technology. With this approach, I create digital
+              solutions that deliver real value and lasting impact.
             </p>
+          </div>
+        </section>
+
+        <section className="bg-primary p-container py-12 md:py-24 lg:py-32">
+          <div className="max-w-5xl mx-auto">
+            <Offering />
           </div>
         </section>
 

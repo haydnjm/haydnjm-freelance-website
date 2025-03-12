@@ -1,0 +1,68 @@
+.container {
+    view-timeline-name: --offering__scrollcontainer;
+    view-timeline-axis: block;
+}
+
+@keyframes progress {
+    0% {
+        left: calc(0% - 12px);
+    }
+
+    25% {
+        left: calc(25% - 12px);
+    }
+
+    75% {
+        left: calc(75% - 12px);
+    }
+
+    100% {
+        left: calc(100% - 12px);
+    }
+}
+
+.progress_indicator {
+    animation: progress linear forwards;
+    animation-timeline: --offering__scrollcontainer;
+    animation-range: contain 0 contain 100%;
+}
+
+@keyframes animate-in-and-out {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+}
+
+.item {
+    transform: translateY(100%);
+    animation: linear animate-in-and-out;
+    animation-timeline: --offering__scrollcontainer;
+}
+
+.box_one {
+    animation-range: contain 0% contain 33%;
+}
+
+.box_two {
+    animation-range: contain 33% contain 66%;
+}
+
+.box_three {
+    animation-range: contain 66% contain 100%;
+}
