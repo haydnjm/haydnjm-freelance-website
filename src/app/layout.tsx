@@ -113,20 +113,20 @@ export default function RootLayout({
                   reserved.
                 </p>
                 <p>+31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96610755</p>
-                {/* <nav className="flex gap-4 sm:gap-6">
-            <Link
-              href="#"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Terms
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Privacy
-            </Link>
-          </nav> */}
+                <nav className="flex gap-4 sm:gap-6">
+                  <Link
+                    href="/terms-of-service"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    Terms of Service
+                  </Link>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    Privacy Policy
+                  </Link>
+                </nav>
               </div>
             </footer>
           </div>
