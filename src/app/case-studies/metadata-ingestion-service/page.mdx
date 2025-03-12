@@ -4,6 +4,8 @@ import BlogNav from '@/components/blog-nav'
 import cover from './metadata-min.jpg'
 import ContactBanner from '@/components/contact-banner'
 import dashboard from './dash.png'
+import CompanyTile from '@/components/company-tile'
+import logo from '@/images/companies/ivy.jpg'
 
 <Image
   src={cover}
@@ -15,6 +17,8 @@ import dashboard from './dash.png'
 # Metadata Ingestion Service
 ### Go, MQTT, Pubsub
 #### Prometheus, Grafana
+
+<CompanyTile logo={logo} name="ivy Solutions" />
 
 >### tl;dr
 > I built a Go microservice to handle metadata ingestion from a fleet of remote devices. It processes over 3,000 messages per minute with an uptime exceeding 99.99%.
