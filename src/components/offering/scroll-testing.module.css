@@ -5,19 +5,23 @@
 
 @keyframes progress {
     0% {
-        left: calc(0% - 12px);
+        width: calc(0%);
+        /* left: calc(0% - 12px); */
     }
 
     25% {
-        left: calc(25% - 12px);
+        width: calc(25%);
+        /* left: calc(25% - 12px); */
     }
 
     75% {
-        left: calc(75% - 12px);
+        width: calc(75%);
+        /* left: calc(75% - 12px); */
     }
 
     100% {
-        left: calc(100% - 12px);
+        width: calc(100%);
+        /* left: calc(100% - 12px); */
     }
 }
 
@@ -30,22 +34,22 @@
 @keyframes animate-in-and-out {
     0% {
         opacity: 0;
-        transform: translateX(10%);
+        transform: translateY(15%);
     }
 
     20% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     80% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     100% {
         opacity: 0;
-        transform: translateX(-10%);
+        transform: translateY(-15%);
     }
 }
 
@@ -56,7 +60,7 @@
 }
 
 .box_one {
-    animation-range: contain 0% contain 33%;
+    animation-range: cover 10% contain 33%;
 }
 
 .box_two {
@@ -64,5 +68,5 @@
 }
 
 .box_three {
-    animation-range: contain 66% contain 100%;
+    animation-range: contain 66% contain 110%;
 }

@@ -5,18 +5,17 @@ import styles from "./scroll-testing.module.css";
 
 const ScrollAnimatedOffering = () => {
   return (
-    <div className={`h-[500vh] relative ${styles.container}`}>
+    <div className={`h-[300vh] relative ${styles.container}`}>
       {/* Progress bar */}
       <div
-        className={`h-1.5 w-full bg-background rounded-sm sticky top-[calc(20vh-3px)] left-0 flex items-center justify-between`}
+        className={`w-full sticky top-[calc(20vh)] left-0 flex items-center justify-around text-lg tracking-tighter text-primary-foreground`}
       >
-        <div className={`h-4 w-4 bg-background rounded-full`} />
-        <div className={`h-4 w-4 bg-background rounded-full`} />
-        <div className={`h-4 w-4 bg-background rounded-full`} />
-        <div className={`h-4 w-4 bg-background rounded-full`} />
+        <h4>Consult</h4>
+        <h4>Consult+Build</h4>
+        <h4>Build</h4>
       </div>
       <div
-        className={`h-6 w-6 -mt-4 bg-background rounded-full sticky top-[calc(20vh-12px)] left-0 ${styles.progress_indicator}`}
+        className={`w-0 h-2 bg-background rounded-full sticky top-[calc(20vh+24px)] left-0 ${styles.progress_indicator}`}
       />
       {/* Progress indicator */}
       <div

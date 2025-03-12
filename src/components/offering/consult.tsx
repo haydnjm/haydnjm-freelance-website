@@ -14,7 +14,7 @@ const Consult = () => {
         "Technology advisory",
         "Architecture & scalability planning",
         "Technical feasibility assessments",
-        "Process & workflow optimization",
+        "Process & workflow optimisation",
       ]}
     />
   );
