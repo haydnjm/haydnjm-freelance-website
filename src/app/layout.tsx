@@ -47,7 +47,7 @@ export default function RootLayout({
         <Toaster />
         <main>
           <div className="flex min-h-screen flex-col">
-            <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-container">
+            <header className="sticky top-0 z-40 w-full border-b-2 border-secondary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-container">
               <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center gap-6">
                   <Link href="/" className="flex items-center space-x-2">

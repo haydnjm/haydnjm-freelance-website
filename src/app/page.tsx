@@ -55,7 +55,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center justify-center lg:justify-end">
-              <div className="relative h-[225px] w-[225px] sm:h-[350px] sm:w-[350px] rounded-full bg-gradient-to-b from-primary/20 to-primary/0 p-4">
+              <div className="relative h-[225px] w-[225px] sm:h-[350px] sm:w-[350px] rounded-full bg-secondary p-4">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] overflow-hidden rounded-full bg-muted">
                     <Image
