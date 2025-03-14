@@ -198,6 +198,16 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* <section id="home-projects" className="w-full pb-12 md:pb-24 lg:pb-32">
+          <h2 className="text-center font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl my-12">
+            Home Projects
+          </h2>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mx-auto text-center">
+            A selection of projects I&apos;ve worked on in my spare time.
+          </p>
+          <HomeProjectCards />
+        </section> */}
       </main>
     </div>
   );
