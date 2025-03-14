@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Toaster } from "sonner";
-import Script from "next/script";
-import { Linkedin } from "lucide-react";
-import { Github } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 import logo from "@/images/logo.png";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+import { Toaster } from "sonner";
 import { GITHUB, LINKEDIN } from "../constants";
-import { Mail } from "lucide-react";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,10 +18,56 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Haydn Morris | Freelance Software Engineer",
+export const metadata = {
+  metadataBase: new URL("https://haydnjm.com"),
+  title: {
+    default: "Haydn Morris | Freelance Software Engineer",
+    template: "%s | Haydn Morris",
+  },
   description:
     "Bridging the gap between product vision and technical execution. I help businesses build products that users love and engineers can maintain.",
+  keywords: [
+    "Haydn Morris",
+    "Freelance Software Engineer",
+    "Software Engineer",
+    "Product Vision",
+    "Technical Execution",
+  ],
+  authors: [{ name: "Haydn Morris" }],
+  creator: "Haydn Morris",
+  publisher: "Haydn Morris Digital",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://haydnjm.com",
+    siteName: "Haydn Morris | Freelance Software Engineer",
+    title: "Haydn Morris | Freelance Software Engineer",
+    description:
+      "Bridging the gap between product vision and technical execution. I help businesses build products that users love and engineers can maintain.",
+    images: [
+      {
+        url: "/images/thumbnail-wide.png",
+        width: 1200,
+        height: 630,
+        alt: "Haydn Morris | Freelance Software Engineer",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -112,7 +155,9 @@ export default function RootLayout({
                   &copy; {new Date().getFullYear()} Haydn Morris. All rights
                   reserved.
                 </p>
-                <p>+31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96610755</p>
+                <p className="text-center">
+                  +31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96610755
+                </p>
                 <nav className="flex gap-4 sm:gap-6">
                   <Link
                     href="/terms-of-service"

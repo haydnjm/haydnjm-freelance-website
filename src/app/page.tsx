@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <div>
       <main className="flex-1">
-        <section id="hero" className="p-container py-24 md:py-32">
+        <section id="hero" className="p-container pt-24 pb-6 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 max-w-5xl mx-auto">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                <h1 className="font-bold tracking-tighter text-5xl lg:text-6xl">
                   Turning Ideas Into Digital Reality
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] md:text-xl">
                   I&apos;m a freelance software engineer based in Amsterdam. I
                   specialise in bridging the gap between product vision and
                   technical execution.
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="#contact">
-                  <Button size="lg" className="md:w-full">
+                  <Button variant="secondary" size="lg" className="md:w-full">
                     Get in Touch
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -72,13 +72,13 @@ export default function Home() {
 
         <section
           id="about"
-          className="p-container py-12 md:py-24 lg:py-32 relative overflow-hidden "
+          className="p-container md:py-24 lg:py-32 relative overflow-hidden"
         >
-          <div className="max-w-5xl flex flex-col items-center justify-center gap-4 mx-auto p-6 text-center relative z-10">
+          <div className="max-w-5xl flex flex-col items-center justify-center gap-4 mx-auto p-0 sm:p-6 text-center relative z-10">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
               About Me
             </h2>
-            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-left sm:text-center">
               I am an engineer and passionate product manager with more than
               eight years of experience building a wide range of digital
               products. I believe that truly effective digital solutions come
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-primary p-container py-12 md:py-24 lg:py-32">
+        <section className="bg-primary text-primary-foreground p-container py-12 md:py-24 lg:py-32">
           <div className="max-w-5xl mx-auto">
             <Offering />
           </div>

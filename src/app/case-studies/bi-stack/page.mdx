@@ -7,6 +7,16 @@ import ContactBanner from '@/components/contact-banner'
 import CompanyTile from '@/components/company-tile'
 import logo from '@/images/companies/deb.png'
 
+export const metadata = {
+  title: "Building a Modern Data Stack",
+  description:
+    "An integrated data platform providing key business insights.",
+  nextPost: {
+    title: "AI on the Edge",
+    slug: "/case-studies/ai-on-the-edge",
+  },
+};
+
 <Image
   src={biStackCover}
   alt="Modern data stack visualisation"
@@ -37,16 +47,16 @@ Some of the key aspects I optimised for included:
 ## solution
 I opted to use the following tools:
 
-### Data Ingestion
+### data ingestion
 I selected Fivetran to ingest data from a variety of sources. While this is a paid service it greatly outweighs the cost of developers' time to set up and maintain the necessary integrations.
 
-### Data Transformation
+### data transformation
 dbt is the de facto standard for data transformation. It allows the data analysts to write SQL transformations that are easy to understand and maintain.
 
-### Data Warehousing
+### data warehousing
 I opted for BigQuery to warehouse the data. This solution fits in well with the company's existing GCP infrastructure and is a powerful tool for the data analysts.
 
-### Data Visualization
+### data visualization
 Tableau was selected for a couple of reasons:
 - The company already had some experience with using it
 - It is compatible with the hardware available to the company (i.e. on Macs, which PowerBI is not)

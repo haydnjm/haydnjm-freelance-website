@@ -8,7 +8,7 @@ const ScrollAnimatedOffering = () => {
     <div className={`h-[300vh] relative ${styles.container}`}>
       {/* Progress bar */}
       <div
-        className={`w-full sticky top-[calc(15vh)] md:top-[calc(20vh)] left-0 flex items-center justify-around text-lg tracking-tighter text-primary-foreground`}
+        className={`w-full sticky top-[calc(15vh)] md:top-[calc(20vh)] left-0 flex items-center justify-around text-lg tracking-tighter`}
       >
         <h4>Consult</h4>
         <h4>Consult+Build</h4>
@@ -19,17 +19,17 @@ const ScrollAnimatedOffering = () => {
       />
       {/* Progress indicator */}
       <div
-        className={`text-primary-foreground sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_one}`}
+        className={`sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_one}`}
       >
         <Consult />
       </div>
       <div
-        className={`text-primary-foreground sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_two}`}
+        className={`sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_two}`}
       >
         <ConsultAndBuild />
       </div>
       <div
-        className={`text-primary-foreground sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_three}`}
+        className={`sticky top-[25vh] md:top-[30vh] left-0 opacity-0 ${styles.item} ${styles.box_three}`}
       >
         <Build />
       </div>
