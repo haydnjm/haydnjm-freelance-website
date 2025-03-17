@@ -89,7 +89,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-primary text-primary-foreground p-container py-12 md:py-24 lg:py-32">
+        <section
+          id="offering"
+          className="bg-primary text-primary-foreground p-container py-12 md:py-24 lg:py-32"
+        >
           <div className="max-w-5xl mx-auto">
             <Offering />
           </div>
