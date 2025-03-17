@@ -79,10 +79,10 @@ export default function Home() {
               About Me
             </h2>
             <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-left sm:text-center">
-              I am an engineer and passionate product manager with more than
-              eight years of experience building a wide range of digital
-              products. I believe that truly effective digital solutions come
-              from understanding the business and the user as much as from
+              I am a full-stack engineer and passionate product manager with
+              more than eight years of experience building a wide range of
+              digital products. I believe that truly effective digital solutions
+              come from understanding the business and the user as much as from
               understanding technology. With this approach, I create digital
               solutions that deliver real value and lasting impact.
             </p>
