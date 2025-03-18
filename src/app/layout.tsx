@@ -107,22 +107,28 @@ export default function RootLayout({
                     />
                     <span className="inline-block font-bold">Haydn Morris</span>
                   </Link>
-                  <nav className="hidden md:flex gap-6">
+                  <nav className="hidden md:flex gap-6 text-sm font-medium text-foreground">
                     <Link
                       href="/#about"
-                      className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                      className="transition-colors hover:text-primary"
                     >
                       About
                     </Link>
                     <Link
-                      href="/#case-studies"
-                      className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                      href="/#testimonials"
+                      className="transition-colors hover:text-primary"
+                    >
+                      Testimonials
+                    </Link>
+                    <Link
+                      href="/case-studies"
+                      className="transition-colors hover:text-primary"
                     >
                       Case Studies
                     </Link>
                     <Link
                       href="/#contact"
-                      className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                      className="transition-colors hover:text-primary"
                     >
                       Contact
                     </Link>

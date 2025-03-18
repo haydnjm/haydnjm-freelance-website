@@ -1,18 +1,15 @@
 import ContactForm from "@/components/contact-form";
-import ProjectCard from "@/components/project-card";
 import { Button } from "@/components/ui/button";
 import { EMAIL } from "@/constants";
-import elt from "@/images/elt-min.jpg";
-import james from "@/images/james.png";
-import metadata from "@/images/metadata-min.jpg";
-import securityCam from "@/images/security-cam-min.jpg";
-import smartLock from "@/images/smart-lock-min.jpg";
-import solarPanels from "@/images/solar-panels-min.jpg";
+
 import splash from "@/images/splash-faded.png";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Marquee from "../components/marquee";
 import Offering from "../components/offering";
+import { testimonials } from "../components/testimonials/data";
+import TestimonialCard from "../components/testimonials/testimonial-card";
 
 export default function Home() {
   return (
@@ -98,62 +95,48 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="case-studies"
-          className="p-container py-12 md:py-24 lg:py-32 bg-muted/50"
-        >
-          <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-4 text-center">
-            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
-              Case Studies
-            </h2>
-            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Each project represents my commitment to quality, attention to
-              detail, and passion for creating exceptional digital experiences.
-            </p>
+        {/* <section id="testimonials" className="my-36">
+          <Carousel
+            elements={testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                testimonial={testimonial}
+              />
+            ))}
+          />
+        </section> */}
+
+        <section id="testimonials" className="py-36">
+          <div className="hidden md:block">
+            <Marquee speed="normal" direction="left" gap={8}>
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.name}
+                  className="flex items-end justify-center pb-20"
+                >
+                  <TestimonialCard testimonial={testimonial} />
+                </div>
+              ))}
+            </Marquee>
           </div>
-          <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-8">
-            <ProjectCard
-              title="Business intelligence platform"
-              description="Built an end-to-end business intelligence stack enabling data driven decision making"
-              tags={["dbt", "Fivetran", "BigQuery", "Tableau"]}
-              image={elt}
-              link="/case-studies/bi-stack"
-            />
-            <ProjectCard
-              title="AI on the Edge"
-              description="Deployed a fleet of devices for ML-on-the-edge security camera monitoring"
-              tags={["Python", "Deepstream", "AWS Greengrass", "Docker"]}
-              image={securityCam}
-              link="/case-studies/ai-on-the-edge"
-            />
-            <ProjectCard
-              title="Installation planning app"
-              description="Built a back-office planning application for installation teams, reducing planning time and process complexity"
-              tags={["Typescript", "Next.js", "GraphQL", "MongoDB"]}
-              image={solarPanels}
-              link="/case-studies/planning-environment"
-            />
-            <ProjectCard
-              title="NFC locking PoC"
-              description="Conducted a technical research project into the feasibility of incorporating additional NFC-based hardware products into a company's offering"
-              tags={[]}
-              image={smartLock}
-              link="/case-studies/nfc-lock-poc"
-            />
-            <ProjectCard
-              title="Metadata ingestion service"
-              description="Built a high-availability metadata ingestion service to process high volumes of MQTT messages"
-              tags={["Go", "MQTT", "Pubsub", "Grafana"]}
-              image={metadata}
-              link="/case-studies/metadata-ingestion-service"
-            />
-            <ProjectCard
-              title="Media outreach website"
-              description="Created a personal branding website for a celebrity antiques dealer based in the UK"
-              tags={["Typescript", "Astro", "Tailwind", "Vercel"]}
-              image={james}
-              link="/case-studies/james-broad-media"
-            />
+          <div className="block md:hidden">
+            <div
+              className="overflow-x-auto [&::-webkit-scrollbar]:h-10 [&::-webkit-scrollbar-thumb]:bg-secondary [&::-webkit-scrollbar-track]:bg-transparent scroll"
+              style={{ scrollbarColor: "var(--secondary) transparent" }}
+            >
+              <div className="w-full min-w-max">
+                <div className="flex">
+                  {testimonials.map((testimonial) => (
+                    <div
+                      key={testimonial.name}
+                      className="flex items-end justify-center pb-20"
+                    >
+                      <TestimonialCard testimonial={testimonial} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

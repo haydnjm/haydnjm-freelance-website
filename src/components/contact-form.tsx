@@ -118,7 +118,12 @@ export default function ContactForm({
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting}
+          data-umami-event="Contact form submission"
+        >
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
