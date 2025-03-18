@@ -20,6 +20,12 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://haydnjm.com"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-GB": "/en-GB",
+    },
+  },
   title: {
     default: "Haydn Morris | Freelance Software Engineer",
     template: "%s | Haydn Morris",
@@ -44,7 +50,6 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://haydnjm.com",
     siteName: "Haydn Morris | Freelance Software Engineer",
     title: "Haydn Morris | Freelance Software Engineer",
     description:
