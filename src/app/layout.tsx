@@ -156,7 +156,9 @@ export default function RootLayout({
                   reserved.
                 </p>
                 <p className="text-center">
-                  +31 6 40 46 66 45 | hello@haydnjm.com | KvK: 96617055
+                  +31 6 40 46 66 45 |{" "}
+                  <a href="mailto:hello@haydnjm.com">hello@haydnjm.com</a> |
+                  KvK: 96617055
                 </p>
                 <nav className="flex gap-4 sm:gap-6">
                   <Link

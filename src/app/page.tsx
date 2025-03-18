@@ -170,7 +170,7 @@ export default function Home() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-muted-foreground" />
-                  <span>{EMAIL}</span>
+                  <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex gap-2">
