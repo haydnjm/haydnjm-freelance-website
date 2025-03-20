@@ -1,7 +1,7 @@
 import { GITHUB, LINKEDIN } from "@/constants";
 import type { Metadata } from "next";
 import React, { unstable_ViewTransition as ViewTransition } from "react";
-import "../globals.css";
+import "../../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://haydnjm.com"),

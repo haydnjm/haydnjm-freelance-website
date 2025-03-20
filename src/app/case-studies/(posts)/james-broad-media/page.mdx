@@ -3,6 +3,7 @@ import cover from './cover.png'
 import lighthouse from './lighthouse.png'
 import BlogNav from '@/components/blog-nav'
 import ContactBanner from '@/components/contact-banner'
+import splash from './splash.png'
 
 export const metadata = {
   title: "James Broad Media",
@@ -33,6 +34,12 @@ He wanted a website which showcased his television work, enabled media companies
 We worked together using Figma to create an interactive mockup that was simple and clean, but that also allowed him to put his unique personality across.
 
 When we were happy with the design, I implemented it using Astro and Tailwind (with Typescript) and deployed it on Vercel. I also integrated Google Analytics to allow him to track the success of his website, especially during TV appearances.
+
+<Image
+  src={splash}
+  alt="Splash image of website"
+  className="mx-auto"
+/>
 
 ## results
 The website scores 100 across the board in Google's Lighthouse and ranks #1 for James's name on Google despite his heavily active social media presence.

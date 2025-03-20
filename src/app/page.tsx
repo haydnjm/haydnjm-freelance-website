@@ -10,16 +10,14 @@ import {
   Github,
   Linkedin,
   Mail,
-  PauseCircle,
-  PlayCircle,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "../components/marquee";
 import Offering from "../components/offering";
+import PlayIndicator from "../components/play-indicator";
 import { testimonials } from "../components/testimonials/data";
 import TestimonialCard from "../components/testimonials/testimonial-card";
-import PlayIndicator from "../components/play-indicator";
 
 export default function Home() {
   return (

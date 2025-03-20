@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 const ContactBanner = () => {
   return (
     <ContactPopup>
-      <div className="p-5 w-full rounded-md bg-primary text-primary-foreground text-center">
+      <div className="p-5 w-full rounded-md bg-secondary text-secondary-foreground text-center">
         <p>
           Do you have a similar project in mind?
           <Button variant="outline" className="ml-2 text-foreground">
