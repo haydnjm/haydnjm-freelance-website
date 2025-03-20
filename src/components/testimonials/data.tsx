@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import chrisWhiteheadImage from "@/components/testimonials/images/chris.png";
-import mattDeYoungImage from "@/components/testimonials/images/matt.jpeg";
+import mattDeYoungImage from "@/components/testimonials/images/matt.png";
 import jamesBroadImage from "@/components/testimonials/images/james.png";
 import timoSpringerImage from "@/components/testimonials/images/timo.png";
 import leoVanBeekImage from "@/components/testimonials/images/leo.jpeg";
