@@ -3,13 +3,23 @@ import { Button } from "@/components/ui/button";
 import { EMAIL } from "@/constants";
 
 import splash from "@/images/splash-faded.png";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  PauseCircle,
+  PlayCircle,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "../components/marquee";
 import Offering from "../components/offering";
 import { testimonials } from "../components/testimonials/data";
 import TestimonialCard from "../components/testimonials/testimonial-card";
+import PlayIndicator from "../components/play-indicator";
 
 export default function Home() {
   return (
@@ -106,9 +116,15 @@ export default function Home() {
           />
         </section> */}
 
-        <section id="testimonials" className="py-36">
-          <div className="hidden md:block">
-            <Marquee speed="normal" direction="left" gap={8}>
+        <section id="testimonials" className="pt-36">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center mb-8 px-2">
+            What people say about my work
+          </h2>
+          <div className="flex justify-center sm:hidden">
+            <ArrowLeft className="text-secondary w-10 h-10" />
+          </div>
+          <div className="hidden md:block relative">
+            <Marquee id="marquee" speed="normal" direction="left" gap={8}>
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.name}
@@ -118,6 +134,7 @@ export default function Home() {
                 </div>
               ))}
             </Marquee>
+            <PlayIndicator id="marquee" />
           </div>
           <div className="block md:hidden">
             <div
@@ -136,6 +153,26 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="case-studies"
+          className="p-container py-12 md:py-24 lg:py-32 block sm:hidden"
+        >
+          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+              Case Studies
+            </h2>
+            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+              Explore detailed examples of my recent projects and the impact
+              they&apos;ve made.
+            </p>
+            <div className="flex justify-center">
+              <Link href="/case-studies">
+                <Button size={"lg"}>View Case Studies</Button>
+              </Link>
             </div>
           </div>
         </section>

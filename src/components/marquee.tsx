@@ -4,6 +4,7 @@ import styles from "./marquee.module.css";
 
 type InfiniteScrollProps = {
   children: ReactNode;
+  id?: string;
   direction?: "left" | "right";
   speed?: "slow" | "normal" | "fast";
   gap?: number;
@@ -11,6 +12,7 @@ type InfiniteScrollProps = {
 
 export default function Marquee({
   children,
+  id,
   direction = "left",
   speed = "normal",
   gap = 4,
@@ -30,7 +32,7 @@ export default function Marquee({
   const gapClass = `gap-${gap}`;
 
   return (
-    <div className={styles.scrollContainer}>
+    <div id={id} className={styles.scrollContainer}>
       <div className={`${styles.scrollTrack} ${speedClass} ${directionClass}`}>
         {/* First copy of items */}
         <div className={`${styles.scrollContent} ${gapClass} flex`}>

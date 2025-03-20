@@ -73,10 +73,19 @@ export const james: Testimonial = {
   location: "Manchester, UK",
   testimonial: (
     <span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      Working with Haydn on my website has been an exceptional experience. His
+      creativity, attention to detail, and technical expertise transformed my
+      vision into a visually stunning and user-friendly platform.{" "}
+      <Highlight>
+        The project significantly enhanced my online presence and engagement
+      </Highlight>
+      . Haydn&apos;s professionalism and dedication have made our collaborations
+      enjoyable and productive, and I appreciate his ability to bring fresh
+      ideas to each project.{" "}
+      <Highlight>
+        Having worked together multiple times, I can confidently recommend him
+        to anyone seeking top-notch web design and build services!
+      </Highlight>
     </span>
   ),
 };
@@ -120,9 +129,9 @@ export const leoVanBeek: Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
-  mattDeYoung,
-  timoSpringer,
-  chrisWhitehead,
   james,
-  leoVanBeek,
+  timoSpringer,
+  mattDeYoung,
+  chrisWhitehead,
+  // leoVanBeek,
 ];
