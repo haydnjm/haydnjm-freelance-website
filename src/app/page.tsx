@@ -1,6 +1,6 @@
 import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
-import { EMAIL } from "@/constants";
+import { EMAIL, LINKEDIN } from "@/constants";
 
 import splash from "@/images/splash-faded.png";
 import {
@@ -202,7 +202,7 @@ export default function Home() {
                       <span className="sr-only">GitHub</span>
                     </Link>
                     <Link
-                      href="https://linkedin.com"
+                      href={LINKEDIN}
                       target="_blank"
                       rel="noreferrer"
                       className="text-muted-foreground hover:text-foreground"
