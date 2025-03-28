@@ -15,7 +15,8 @@ async function getCaseStudySlugs(dir: string) {
       );
       return path.dirname(relativePath);
     })
-    .map((slug) => slug.replace(/\\/g, "/"));
+    .map((slug) => slug.replace(/\\/g, "/"))
+    .map((slug) => slug.replace(/^\(posts\)\//, ""));
 }
 
 export default async function sitemap() {
