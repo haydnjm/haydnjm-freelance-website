@@ -157,7 +157,7 @@ export default function Home() {
 
         <section
           id="case-studies"
-          className="p-container py-12 md:py-24 lg:py-32 block sm:hidden"
+          className="p-container py-12 md:py-24 lg:py-32 block md:hidden"
         >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
