@@ -18,12 +18,12 @@ const OfferingBlock = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-2">
-        <h2 className="flex-1 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="flex-1 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
           {title}
         </h2>
         <Image src={icon} alt={title} className="h-10 sm:h-16 md:h-20 flex-0" />
       </div>
-      <h3 className="text-lg font-bold tracking-tighter sm:text-xl md:text-2xl lg:text-3xl">
+      <h3 className="text-lg font-bold tracking-tight sm:text-xl md:text-2xl lg:text-3xl">
         {subtitle}
       </h3>
       <div className="flex gap-4 my-4 justify-center flex-col md:flex-row">

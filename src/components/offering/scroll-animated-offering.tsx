@@ -8,7 +8,7 @@ const ScrollAnimatedOffering = () => {
     <div className={`h-[300vh] relative ${styles.container}`}>
       {/* Progress bar */}
       <div
-        className={`w-full sticky top-[calc(15vh)] md:top-[calc(20vh)] left-0 flex items-center justify-around text-lg tracking-tighter`}
+        className={`w-full sticky top-[calc(15vh)] md:top-[calc(20vh)] left-0 flex items-center justify-around text-2xl font-display`}
       >
         <h4>Consult</h4>
         <h4>Consult+Build</h4>

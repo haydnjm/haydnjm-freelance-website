@@ -36,7 +36,7 @@ export default function ProjectCard({
         />
       </div>
       <CardHeader className="">
-        <h3 className="text-xl font-bold">{title}</h3>
+        <h2 className="text-xl font-bold">{title}</h2>
         {tags.length > 0 && (
           <div className="flex flex-wrap gap-2 ">
             {tags.map((tag) => (

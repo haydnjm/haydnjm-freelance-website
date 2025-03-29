@@ -1,6 +1,6 @@
 import logo from "@/images/logo.png";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Ubuntu, Ubuntu_Mono, Funnel_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -9,14 +9,22 @@ import { GITHUB, LINKEDIN } from "../constants";
 import "./globals.css";
 import { Metadata } from "next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ubuntuMono = Ubuntu_Mono({
+  variable: "--font-ubuntu-mono",
   subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const funnelyDisplay = Funnel_Display({
+  variable: "--font-funnely-display",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -100,7 +108,7 @@ export default function RootLayout({
         />
       )}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${funnelyDisplay.variable} ${ubuntu.variable} ${ubuntuMono.variable} antialiased`}
       >
         <Toaster />
         <main>
@@ -115,7 +123,9 @@ export default function RootLayout({
                       width={32}
                       height={32}
                     />
-                    <span className="inline-block font-bold">Haydn Morris</span>
+                    <span className="inline-block font-bold font-display">
+                      Haydn Morris
+                    </span>
                   </Link>
                   <nav className="hidden md:flex gap-6 text-sm font-medium text-foreground">
                     <Link

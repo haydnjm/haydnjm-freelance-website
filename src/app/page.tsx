@@ -27,7 +27,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 max-w-5xl mx-auto">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="font-bold tracking-tighter text-5xl lg:text-6xl">
+                <h1 className="font-bold text-5xl lg:text-6xl tracking-tight">
                   Turning Ideas Into Digital Reality
                 </h1>
                 <p className="max-w-[600px] md:text-xl">
@@ -80,7 +80,7 @@ export default function Home() {
           className="p-container md:py-24 lg:py-32 relative overflow-hidden"
         >
           <div className="max-w-5xl flex flex-col items-center justify-center gap-4 mx-auto p-0 sm:p-6 text-center relative z-10">
-            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl tracking-tight">
               About Me
             </h2>
             <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-left sm:text-center">
@@ -115,7 +115,7 @@ export default function Home() {
         </section> */}
 
         <section id="testimonials" className="pt-36">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center mb-8 px-2">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center mb-8 px-2 tracking-tight">
             What people say about my work
           </h2>
           <div className="flex justify-center sm:hidden">
@@ -178,7 +178,7 @@ export default function Home() {
         <section id="contact" className="p-container py-12 md:py-24 lg:py-32">
           <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+              <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl tracking-tight">
                 Let&apos;s Work Together
               </h2>
               <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">

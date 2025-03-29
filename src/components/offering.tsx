@@ -35,7 +35,7 @@ export default function Offering() {
   // Render the appropriate component based on browser detection
   return (
     <>
-      <h1 className="flex-1 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center my-8">
+      <h1 className="flex-1 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-center my-8">
         What can I help you with?
       </h1>
       {browser === "firefox" || browser === "safari" ? (
