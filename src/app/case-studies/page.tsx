@@ -5,7 +5,7 @@ import metadata from "@/images/metadata-min.jpg";
 import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
 import solarPanels from "@/images/solar-panels-min.jpg";
-import ContactPopup from "../../components/contact-popup";
+import ContactDialog from "../../components/contact-dialog";
 import { Button } from "../../components/ui/button";
 
 const CaseStudiesPage = () => {
@@ -79,9 +79,9 @@ const CaseStudiesPage = () => {
             Schedule a free introductory call to discuss your project.
           </p>
           <div className="mt-4">
-            <ContactPopup>
+            <ContactDialog>
               <Button size="lg">Get in contact</Button>
-            </ContactPopup>
+            </ContactDialog>
           </div>
         </div>
       </section>

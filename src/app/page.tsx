@@ -16,9 +16,10 @@ import Link from "next/link";
 import Marquee from "../components/marquee";
 import Offering from "../components/offering";
 import PlayIndicator from "../components/play-indicator";
-import { testimonials } from "../components/testimonials/data";
+import { testimonials } from "../components/testimonials/testimonials-data";
 import TestimonialCard from "../components/testimonials/testimonial-card";
 import Journey from "../components/process";
+import Ticker from "../components/offering/ticker";
 
 export default function Home() {
   return (
@@ -74,7 +75,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-20 max-w-5xl mx-auto">
+            <Ticker />
+          </div>
         </section>
+
+        {/* <section
+          id="ticker"
+          className="p-container pt-24 pb-6 md:py-32 max-w-5xl mx-auto"
+        ></section> */}
 
         <section
           id="about"

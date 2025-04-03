@@ -5,7 +5,7 @@ const Journey = () => {
   const journeySteps = [
     {
       id: 1,
-      icon: <Brain size={100} />,
+      icon: <Brain className="w-12 h-12 sm:w-24 sm:h-24 mb-6 sm:mb-0" />,
       title: "Consultation",
       description: [
         <div key="consultation-1">
@@ -24,13 +24,13 @@ const Journey = () => {
     {
       id: 2,
       title: "Technical Roadmap",
-      icon: <Map size={100} />,
+      icon: <Map className="w-12 h-12 sm:w-24 sm:h-24 mb-6 sm:mb-0" />,
       description: [
         <div key="roadmap-1">
           <p>
             I define a set of potential paths forward for you. We decide
             together which is the best path for you. We set milestones and
-            deliverables,
+            deliverables,{" "}
             <Highlight>
               so that there are never any nasty surprises or misaligned
               expectations.
@@ -43,7 +43,7 @@ const Journey = () => {
     {
       id: 3,
       title: "Implementation",
-      icon: <Wrench size={100} />,
+      icon: <Wrench className="w-12 h-12 sm:w-24 sm:h-24 mb-6 sm:mb-0" />,
       description: [
         <div key="implementation-1">
           <p>
@@ -63,7 +63,7 @@ const Journey = () => {
     {
       id: 4,
       title: "Maintenance",
-      icon: <Rocket size={100} />,
+      icon: <Rocket className="w-12 h-12 sm:w-24 sm:h-24 mb-6 sm:mb-0" />,
       description: [
         <div key="maintenance-1">
           <p>
@@ -95,7 +95,7 @@ const Journey = () => {
             <div
               key={step.id}
               className={
-                "md:flex gap-8 p-6 md:p-20 mb-10 bg-accent-foreground border border-secondary rounded-lg text-background sticky shadow-[0_35px_40px_-15px_rgba(0,0,0,0.2)]"
+                "sm:flex gap-8 p-12 sm:p-20 mb-10 bg-accent-foreground border border-secondary rounded-lg text-background sticky shadow-[0_35px_40px_-15px_rgba(0,0,0,0.2)]"
               }
               style={{ top: `${top}vh` }}
             >
@@ -104,7 +104,7 @@ const Journey = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-display">
-                  {step.title}
+                  {step.id}. {step.title}
                 </h3>
                 <div key={index} className="text-background space-y-4">
                   {step.description}

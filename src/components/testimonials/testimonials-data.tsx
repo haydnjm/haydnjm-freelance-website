@@ -152,8 +152,8 @@ export const leoVanBeek: Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
-  mattDeYoung,
   james,
+  mattDeYoung,
   jeffryBroek,
   timoSpringer,
   chrisWhitehead,

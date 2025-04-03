@@ -7,7 +7,8 @@ export const Build = () => {
       icon={gear}
       title="Build"
       subtitle="Already know what you need?"
-      description="I can help bring your vision to life. Whether you're launching a new product or improving an existing one, I provide hands-on development expertise to build high-quality, scalable software that meets your business needs."
+      description="Whether you're launching a new product or improving an existing one, I provide hands-on development expertise to build high-quality, scalable software that meets your business needs."
+      buttonText="Level up your product"
       services={[
         "Custom software development",
         "Application development for web and mobile",

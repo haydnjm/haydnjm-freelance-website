@@ -1,6 +1,8 @@
 import "@/app/globals.css";
-import { CheckIcon } from "lucide-react";
+import { ArrowRight, CheckIcon } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
+import ContactDialog from "../contact-dialog";
+import { Button } from "../ui/button";
 
 const OfferingBlock = ({
   title,
@@ -8,12 +10,14 @@ const OfferingBlock = ({
   description,
   services,
   icon,
+  buttonText,
 }: {
   title: string;
   subtitle: string;
   description: string;
   services: string[];
   icon: StaticImageData;
+  buttonText?: string;
 }) => {
   return (
     <div className="flex flex-col gap-4">
@@ -29,6 +33,18 @@ const OfferingBlock = ({
       <div className="flex gap-4 my-4 justify-center flex-col md:flex-row">
         <div className="flex-1">
           <p>{description}</p>
+          {buttonText && (
+            <ContactDialog title={buttonText}>
+              <Button
+                variant="link"
+                className="text-lg text-secondary m-0 p-0 my-4 underline"
+              >
+                <span className="flex items-center">
+                  {buttonText} <ArrowRight className="w-4 h-4 inline ml-2" />
+                </span>
+              </Button>
+            </ContactDialog>
+          )}
         </div>
         <div className="flex-1">
           <ul className="text-sm">

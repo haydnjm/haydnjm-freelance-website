@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Testimonial } from "./data";
+import { Testimonial } from "./testimonials-data";
 import { Quote } from "lucide-react";
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {

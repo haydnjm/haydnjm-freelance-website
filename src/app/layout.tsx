@@ -141,6 +141,12 @@ export default function RootLayout({
                       Testimonials
                     </Link>
                     <Link
+                      href="/#process"
+                      className="transition-colors hover:text-primary"
+                    >
+                      Process
+                    </Link>
+                    <Link
                       href="/case-studies"
                       className="transition-colors hover:text-primary"
                     >

@@ -10,7 +10,13 @@ import {
 } from "./ui/dialog";
 import { useState } from "react";
 
-const ContactPopup = ({ children }: { children: React.ReactNode }) => {
+const ContactDialog = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title?: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,7 +24,7 @@ const ContactPopup = ({ children }: { children: React.ReactNode }) => {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Let&apos;s Work Together</DialogTitle>
+          <DialogTitle>{title || "Let's Work Together"}</DialogTitle>
         </DialogHeader>
         <ContactForm setModalOpen={setIsOpen} />
       </DialogContent>
@@ -26,4 +32,4 @@ const ContactPopup = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ContactPopup;
+export default ContactDialog;

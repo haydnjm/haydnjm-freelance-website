@@ -1,9 +1,9 @@
-import ContactPopup from "./contact-popup";
+import ContactDialog from "./contact-dialog";
 import { Button } from "./ui/button";
 
 const ContactBanner = () => {
   return (
-    <ContactPopup>
+    <ContactDialog>
       <div className="p-5 w-full rounded-md bg-secondary text-secondary-foreground text-center">
         <p>
           Do you have a similar project in mind?
@@ -12,7 +12,7 @@ const ContactBanner = () => {
           </Button>
         </p>
       </div>
-    </ContactPopup>
+    </ContactDialog>
   );
 };
 
