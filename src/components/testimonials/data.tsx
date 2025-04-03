@@ -7,7 +7,7 @@ import timoSpringerImage from "@/components/testimonials/images/timo.png";
 import leoVanBeekImage from "@/components/testimonials/images/leo.jpeg";
 import jeffryBroekImage from "@/components/testimonials/images/jeff.png";
 import { ReactNode } from "react";
-
+import Highlight from "@/components/ui/highlight";
 export type Testimonial = {
   name: string;
   title: string;
@@ -15,14 +15,6 @@ export type Testimonial = {
   company: string;
   location: string;
   testimonial: ReactNode;
-};
-
-const Highlight = ({ children }: { children: ReactNode }) => {
-  return (
-    <span className="bg-secondary text-secondary-foreground rounded-sm px-1">
-      {children}
-    </span>
-  );
 };
 
 export const chrisWhitehead: Testimonial = {

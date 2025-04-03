@@ -18,6 +18,7 @@ import Offering from "../components/offering";
 import PlayIndicator from "../components/play-indicator";
 import { testimonials } from "../components/testimonials/data";
 import TestimonialCard from "../components/testimonials/testimonial-card";
+import Journey from "../components/process";
 
 export default function Home() {
   return (
@@ -103,17 +104,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section id="testimonials" className="my-36">
-          <Carousel
-            elements={testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={testimonial.name}
-                testimonial={testimonial}
-              />
-            ))}
-          />
-        </section> */}
-
         <section id="testimonials" className="pt-36">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center mb-8 px-2 tracking-tight">
             What people say about my work
@@ -175,6 +165,13 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="process" className="p-container py-12 md:py-24 lg:py-32">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center mb-8 px-2 tracking-tight">
+            The Process
+          </h2>
+          <Journey />
+        </section>
+
         <section id="contact" className="p-container py-12 md:py-24 lg:py-32">
           <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
             <div className="space-y-4">
@@ -219,16 +216,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* <section id="home-projects" className="w-full pb-12 md:pb-24 lg:pb-32">
-          <h2 className="text-center font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl my-12">
-            Home Projects
-          </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mx-auto text-center">
-            A selection of projects I&apos;ve worked on in my spare time.
-          </p>
-          <HomeProjectCards />
-        </section> */}
       </main>
     </div>
   );
