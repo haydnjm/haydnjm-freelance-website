@@ -5,6 +5,7 @@ import mattDeYoungImage from "@/components/testimonials/images/matt.png";
 import jamesBroadImage from "@/components/testimonials/images/james.png";
 import timoSpringerImage from "@/components/testimonials/images/timo.png";
 import leoVanBeekImage from "@/components/testimonials/images/leo.jpeg";
+import jeffryBroekImage from "@/components/testimonials/images/jeff.png";
 import { ReactNode } from "react";
 
 export type Testimonial = {
@@ -112,6 +113,30 @@ export const timoSpringer: Testimonial = {
   ),
 };
 
+export const jeffryBroek: Testimonial = {
+  name: "Jeffry Broek",
+  title: "CEO",
+  profilePicture: jeffryBroekImage,
+  company: "De Energiebespaarders",
+  location: "Amsterdam, Netherlands",
+  testimonial: (
+    <span>
+      Working with Haydn has been a transformative experience for our team. As a
+      full stack software engineer{" "}
+      <Highlight>
+        with a keen business mindset, he excels at translating &quot;the
+        what&quot; into &quot;the how&quot; when building software
+      </Highlight>
+      . His critical thinking, positive attitude, and outstanding communication
+      skills foster collaboration and support team members. Haydn is both an
+      autonomous worker and a dedicated team player, consistently delivering
+      high-quality solutions. His strengths and professional demeanour make him
+      one of the best freelance software engineers our organisation could hope
+      for.
+    </span>
+  ),
+};
+
 export const leoVanBeek: Testimonial = {
   name: "Leo van Beek",
   title: "Head of Product",
@@ -120,18 +145,25 @@ export const leoVanBeek: Testimonial = {
   location: "Amsterdam, Netherlands",
   testimonial: (
     <span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      Aside from being a highly valued contributor, he was a blast to work with
+      and easily made friends with his colleagues. I would highly recommend him
+      to any company or team looking to use or increase their use of technology
+      to create value and solve problems for their customers. Haydn would be
+      able to help explore the fuzzy discovery phase and identify what’s
+      valuable, but also{" "}
+      <Highlight>
+        build the prototypes to validate this or even the final implementation
+        to create said value.
+      </Highlight>
     </span>
   ),
 };
 
 export const testimonials: Testimonial[] = [
-  james,
-  timoSpringer,
   mattDeYoung,
+  james,
+  jeffryBroek,
+  timoSpringer,
   chrisWhitehead,
-  // leoVanBeek,
+  leoVanBeek,
 ];
