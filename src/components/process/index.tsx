@@ -95,7 +95,7 @@ const Journey = () => {
             <div
               key={step.id}
               className={
-                "sm:flex gap-8 p-12 sm:p-20 mb-10 bg-accent-foreground border border-secondary rounded-lg text-background sticky shadow-[0_35px_40px_-15px_rgba(0,0,0,0.2)]"
+                "sm:flex gap-8 p-12 sm:p-20 mb-20 md:mb-10 bg-accent-foreground border border-secondary rounded-lg text-background sticky shadow-[0_35px_40px_-15px_rgba(0,0,0,0.2)]"
               }
               style={{ top: `${top}vh` }}
             >
