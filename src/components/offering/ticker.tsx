@@ -5,23 +5,23 @@ import styles from "./ticker.module.css";
 
 const services = [
   "build a new website",
-  "automate a business process",
+  "automate processes",
   "launch a mobile app",
-  "integrate AI into your business",
+  "utilise AI in your business",
   "migrate data to the cloud",
   "integrate third-party APIs",
   "create automated tests",
   "develop a chatbot",
-  "deploy scalable infrastructure",
+  "deploy scalable infra",
   "build a progressive web app",
-  "optimise website performance",
-  "implement responsive design",
+  "optimise website speed",
+  "create responsive designs",
   "develop a REST API",
   "set up CI/CD pipelines",
   "refactor legacy code",
-  "implement authentication systems",
+  "implement authentication",
   "create data visualisations",
-  "build serverless applications",
+  "build serverless apps",
 ];
 
 const Ticker = () => {

@@ -75,9 +75,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-20 max-w-5xl mx-auto">
-            <Ticker />
-          </div>
         </section>
 
         {/* <section
@@ -89,11 +86,11 @@ export default function Home() {
           id="about"
           className="p-container md:py-24 lg:py-32 relative overflow-hidden"
         >
-          <div className="max-w-5xl flex flex-col items-center justify-center gap-4 mx-auto p-0 sm:p-6 text-center relative z-10">
-            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl tracking-tight">
-              About Me
-            </h2>
-            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-left sm:text-center">
+          <div className="max-w-5xl gap-4 mx-auto p-0 sm:p-6">
+            <div className="max-w-5xl mx-auto">
+              <Ticker />
+            </div>
+            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               I am a full-stack engineer and passionate product manager with
               more than eight years of experience building a wide range of
               digital products. I believe that truly effective digital solutions
