@@ -16,6 +16,7 @@ export const sendMessageEmail = async (
       from: "Website <hello@haydnjm.com>",
       to: "hello@haydnjm.com",
       subject: `New message from ${name}`,
+      replyTo: email,
       react: <MessageEmail name={name} email={email} message={message} />,
     });
 
