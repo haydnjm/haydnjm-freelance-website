@@ -10,16 +10,15 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import Marquee from "../components/marquee";
 import Offering from "../components/offering";
-import PlayIndicator from "../components/play-indicator";
-import { testimonials } from "../components/testimonials/testimonials-data";
-import TestimonialCard from "../components/testimonials/testimonial-card";
-import Journey from "../components/process";
 import Ticker from "../components/offering/ticker";
 import OptimizedImage from "../components/optimized-image";
+import PlayIndicator from "../components/play-indicator";
+import Journey from "../components/process";
+import TestimonialCard from "../components/testimonials/testimonial-card";
+import { testimonials } from "../components/testimonials/testimonials-data";
 
 export default function Home() {
   return (
