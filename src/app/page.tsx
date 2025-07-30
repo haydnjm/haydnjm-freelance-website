@@ -1,7 +1,6 @@
 import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { EMAIL, LINKEDIN } from "@/constants";
-
 import splash from "@/images/splash-faded.png";
 import {
   ArrowLeft,
@@ -20,6 +19,7 @@ import { testimonials } from "../components/testimonials/testimonials-data";
 import TestimonialCard from "../components/testimonials/testimonial-card";
 import Journey from "../components/process";
 import Ticker from "../components/offering/ticker";
+import OptimizedImage from "../components/optimized-image";
 
 export default function Home() {
   return (
@@ -65,10 +65,12 @@ export default function Home() {
               <div className="relative h-[225px] w-[225px] sm:h-[350px] sm:w-[350px] rounded-full bg-secondary p-4">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] overflow-hidden rounded-full bg-muted">
-                    <Image
+                    <OptimizedImage
                       src={splash}
                       alt="Developer portrait"
                       className="h-full w-full object-cover"
+                      isLCP={true}
+                      sizes="(max-width: 640px) 200px, 300px"
                     />
                   </div>
                 </div>

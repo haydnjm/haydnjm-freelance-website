@@ -100,6 +100,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/images/splash-faded.png"
+          as="image"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          href="/images/logo.png"
+          as="image"
+          type="image/png"
+        />
+      </head>
       {process.env.NODE_ENV === "production" && (
         <Script
           defer
@@ -122,6 +136,7 @@ export default function RootLayout({
                       alt="Haydn Morris"
                       width={32}
                       height={32}
+                      priority
                     />
                     <span className="inline-block font-bold font-display">
                       Haydn Morris
