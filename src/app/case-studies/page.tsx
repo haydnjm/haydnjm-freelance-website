@@ -6,6 +6,7 @@ import securityCam from "@/images/security-cam-min.jpg";
 import smartLock from "@/images/smart-lock-min.jpg";
 import solarPanels from "@/images/solar-panels-min.jpg";
 import ContactDialog from "../../components/contact-dialog";
+import desk from "@/app/case-studies/(posts)/technical-appraisal/desk.jpg";
 import { Button } from "../../components/ui/button";
 
 const CaseStudiesPage = () => {
@@ -25,6 +26,13 @@ const CaseStudiesPage = () => {
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-8">
+          <ProjectCard
+            title="Software Project Audit & Remediation Plan"
+            description="Provided an audit that my client could use to assess the damages incurred by underdelivered software"
+            tags={[]}
+            image={desk}
+            link="/case-studies/technical-appraisal"
+          />
           <ProjectCard
             title="Business intelligence platform"
             description="Built an end-to-end business intelligence stack enabling data driven decision making"

@@ -1,0 +1,51 @@
+import Image from 'next/image'
+import ZoomImage from '@/components/zoom-image'
+import BlogNav from '@/components/blog-nav'
+import desk from './desk.jpg'
+import ContactBanner from '@/components/contact-banner'
+import CompanyTile from '@/components/company-tile'
+
+export const metadata = {
+  title: "Software Project Audit & Remediation Plan",
+  description:
+    "Actionable software audit defining contract breaches and a remediation plan.",
+};
+
+<Image
+  src={desk}
+  alt="Desk with laptop and papers"
+  className="object-cover aspect-video"
+  priority
+/>
+
+# Getting back on track: a technical appraisal and remediation plan
+##
+>### tl;dr
+>I performed a technical audit of an underdelivered software project, identifying missing contractual obligations and providing a clear remediation plan and cost estimate to be used in a legal dispute
+### Check out my free technical audit template [here](https://haydn-morris-digital.notion.site/Technical-Appraisal-Template-245a31227d26808fba09d488780bef57).
+##
+
+## problem
+A client approached me with a software project that had been delivered to them incomplete. It was missing key contractual obligations, including features and security requirements.
+
+The client was working with a lawyer to determine the damages that they were able to claim from their contractor for the work that was not delivered.
+
+The contractor claimed that many of the items from the contract were delivered but not visible. This was not verifiable by the client without a technical audit.
+
+## solution
+I performed an in-depth technical audit of the code delivered to the client and provided a series of documents assessing the damages incurred, including:
+- **A technical appraisal** of the work that had been delivered, including a bug report and a list of missing features
+- **A remediation plan** required to complete the contractual obligations, including a cost estimate
+- **A list of advisory measures** to take to bring the software to a production-ready state
+
+## results
+I was able to identify a series of ciritcal issues, including security vulnerabilities, missing features and incorrectly configured infrastructure.
+
+This provided a solid foundation for the client to understand what they had actually receieved from their contractor and what it would take to get the project to the state they had expected.
+
+It streamlined the legal proceedings and allowed the client to focus on getting the business back on track.
+
+<ContactBanner />
+<BlogNav 
+  next={{ title: "Business Intelligence Platform", slug: "/case-studies/bi-stack" }}
+/>

@@ -1,0 +1,42 @@
+import Image from 'next/image'
+import ZoomImage from '@/components/zoom-image'
+import BlogNav from '@/components/blog-nav'
+import lock from './lock.webp'
+import ContactBanner from '@/components/contact-banner'
+import CompanyTile from '@/components/company-tile'
+import logo from '@/images/companies/ivy.jpg'
+
+export const metadata = {
+  title: "Bioinformatics Platform",
+  description:
+    "End-to-end refactor of bioinformatics analysis platform",
+};
+
+<Image
+  src={lock}
+  alt="Digital lock"
+  className="object-cover aspect-video"
+  priority
+/>
+
+# Bioinformatics platform restructure
+
+<CompanyTile logo={logo} name="Soilytix GmbH" />
+
+>### tl;dr
+>
+
+## problem
+
+
+## solution
+
+
+## results
+
+
+<ContactBanner />
+<BlogNav 
+  previous={{ title: "", slug: "" }} 
+  next={{ title: "", slug: "" }}
+/>
