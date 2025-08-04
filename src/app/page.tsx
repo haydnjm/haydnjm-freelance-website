@@ -66,7 +66,7 @@ export default function Home() {
                   <div className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] overflow-hidden rounded-full bg-muted">
                     <OptimizedImage
                       src={splash}
-                      alt="Developer portrait"
+                      alt="Portrait of Haydn Morris"
                       className="h-full w-full object-cover"
                       isLCP={true}
                       sizes="(max-width: 640px) 200px, 300px"

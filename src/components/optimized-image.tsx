@@ -5,6 +5,7 @@ interface OptimizedImageProps
   extends Omit<ComponentProps<typeof Image>, "priority"> {
   priority?: boolean;
   isLCP?: boolean;
+  alt: string;
 }
 
 export default function OptimizedImage({
@@ -16,6 +17,7 @@ export default function OptimizedImage({
   return (
     <Image
       {...props}
+      alt={props.alt || "Image"}
       priority={isLCP || priority}
       quality={quality}
       placeholder="blur"
