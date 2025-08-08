@@ -7,6 +7,7 @@ import smartLock from "@/images/smart-lock-min.jpg";
 import solarPanels from "@/images/solar-panels-min.jpg";
 import ContactDialog from "../../components/contact-dialog";
 import desk from "@/app/case-studies/(posts)/technical-appraisal/desk.jpg";
+import bioinformatics from "@/app/case-studies/(posts)/bioinformatics-platform/map.png";
 import { Button } from "../../components/ui/button";
 
 const CaseStudiesPage = () => {
@@ -26,6 +27,13 @@ const CaseStudiesPage = () => {
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-8">
+          <ProjectCard
+            title="Bioinformatics Platform"
+            description="End-to-end refactor of bioinformatics analysis platform"
+            tags={["Typescript", "Postgres", "Next.js"]}
+            image={bioinformatics}
+            link="/case-studies/bioinformatics-platform"
+          />
           <ProjectCard
             title="Software Project Audit & Remediation Plan"
             description="Provided an audit that my client could use to assess the damages incurred by underdelivered software"

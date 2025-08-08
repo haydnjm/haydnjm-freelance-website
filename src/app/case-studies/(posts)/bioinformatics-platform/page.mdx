@@ -3,6 +3,9 @@ import ZoomImage from '@/components/zoom-image'
 import BlogNav from '@/components/blog-nav'
 import ContactBanner from '@/components/contact-banner'
 import CompanyTile from '@/components/company-tile'
+import map from './map.png'
+import prismaDrizzle from './prisma-drizzle.png';
+import logo from './logo.png'
 
 export const metadata = {
   title: "Bioinformatics Platform",
@@ -10,31 +13,50 @@ export const metadata = {
     "End-to-end refactor of bioinformatics analysis platform",
 };
 
-{/* <Image
-  src={lock}
-  alt="Digital lock"
+<Image
+  src={map}
+  alt="Map of the soil samples in europe"
   className="object-cover aspect-video"
   priority
-/> */}
+/>
 
 # Bioinformatics platform restructure
 
-{/* <CompanyTile logo={logo} name="Soilytix GmbH" /> */}
+<CompanyTile logo={logo} name="Soilytix GmbH" />
 
 >### tl;dr
->
+>In collaboration with the team at Soilytix, I refactored their bioinformatics platform to deliver a scalable, flexible data structure - unlocking the potential for powerful new features as they scale their operations.
 
 ## problem
+Soilytix is a bioinformatics company providing a platform for analysing soil data. Their product delivers critical insights into soil health, making it valuable to both academic institutions and agritech companies worldwide.
 
+Although the platform had a strong foundation, Soilytix wanted to overhaul its data structure to support more complex operations and enable advanced features.  
+
+The challenge: implement this update while the product was actively used by customers across regions - from Brazil to the Middle East.
 
 ## solution
+We started by designing a new database schema and running extensive benchmarks on both the schema and the associated tooling. Testing was done with datasets 10× and 100× the current size to ensure scalability.
 
+During this process, it became clear that a change in ORM was overdue:
+<Image
+  src={prismaDrizzle}
+  alt="Comparison of Prisma and Drizzle"
+/>
+
+Up to this point, the company had been using Prisma. As part of the project, we evaluated alternatives and found Drizzle to be both more performant and better aligned with our API requirements. We decided to make the switch.
+
+Once confident in the new architecture, I refactored the platform’s front-end and back-end to match the new schema. This included reworking API endpoints, data stores, graphs, and UI controls. In total, the restructure involved over 20k lines added and 20k lines removed - most of which couldn’t be offloaded to AI (believe me, I tried).
 
 ## results
+The new data structure opens the door for a range of advanced capabilities, including:
+- Global soil comparison and benchmarking
+- AI-powered querying and interaction with soil data
+- Optimised raw sample data ingestion processes
 
+This overhaul gives Soilytix a robust foundation for growth and innovation, ensuring the platform can handle future demands with ease.
 
 <ContactBanner />
+
 <BlogNav 
-  previous={{ title: "", slug: "" }} 
-  next={{ title: "", slug: "" }}
+  next={{ title: "Technical Appraisal", slug: "/case-studies/technical-appraisal" }} 
 />
