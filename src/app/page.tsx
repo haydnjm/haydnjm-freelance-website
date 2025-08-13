@@ -1,7 +1,7 @@
 import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { EMAIL, LINKEDIN } from "@/constants";
-import splash from "@/images/splash-faded.png";
+import splash from "@/images/splash-2.png";
 import {
   ArrowLeft,
   ArrowRight,
