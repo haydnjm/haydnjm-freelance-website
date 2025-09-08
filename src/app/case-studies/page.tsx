@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/project-card";
-import elt from "@/images/elt-min.jpg";
+import graphs from "@/images/shoot_graphs_min.jpg";
 import james from "@/images/james.png";
 import metadata from "@/images/metadata-min.jpg";
 import securityCam from "@/images/security-cam-min.jpg";
@@ -45,7 +45,7 @@ const CaseStudiesPage = () => {
             title="Business intelligence platform"
             description="Built an end-to-end business intelligence stack enabling data driven decision making"
             tags={["dbt", "Fivetran", "BigQuery", "Tableau"]}
-            image={elt}
+            image={graphs}
             link="/case-studies/bi-stack"
           />
           <ProjectCard

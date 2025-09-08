@@ -151,6 +151,24 @@ export const leoVanBeek: Testimonial = {
   ),
 };
 
+export const frankOudelaar = {
+  name: "Frank Oudelaar",
+  title: "Founder",
+  profilePicture: leoVanBeekImage,
+  company: "Suercrop",
+  location: "Amsterdam, Netherlands",
+  testimonial: (
+    <span>
+      Haydn fully built the front-end and database structure for our MVP. His
+      experience and skills in building solid software was invaluable.{" "}
+      <Highlight>
+        He asks the right questions to make sure we can deliver on time.
+      </Highlight>{" "}
+      Will definitely work with Haydn again in the future.
+    </span>
+  ),
+};
+
 export const testimonials: Testimonial[] = [
   james,
   mattDeYoung,

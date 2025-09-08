@@ -21,11 +21,11 @@ const ubuntuMono = Ubuntu_Mono({
   weight: ["400", "700"],
 });
 
-const funnelyDisplay = Funnel_Display({
-  variable: "--font-funnely-display",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+// const funnelyDisplay = Funnel_Display({
+//   variable: "--font-funnely-display",
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+// });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://haydnjm.com"),
@@ -121,9 +121,7 @@ export default function RootLayout({
           data-website-id="93f88c6a-c263-41bf-b46d-6cec85bd3289"
         />
       )}
-      <body
-        className={`${funnelyDisplay.variable} ${ubuntu.variable} ${ubuntuMono.variable} antialiased`}
-      >
+      <body className={`${ubuntu.variable} ${ubuntuMono.variable} antialiased`}>
         <Toaster />
         <main>
           <div className="flex min-h-screen flex-col">
