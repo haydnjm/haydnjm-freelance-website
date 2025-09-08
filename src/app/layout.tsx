@@ -1,6 +1,6 @@
 import logo from "@/images/logo.png";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Ubuntu, Ubuntu_Mono, Funnel_Display } from "next/font/google";
+import { Ubuntu, Ubuntu_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
