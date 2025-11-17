@@ -2,6 +2,7 @@ import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { EMAIL, LINKEDIN } from "@/constants";
 import splash from "@/images/profile_zoom_min.jpg";
+import about from "@/images/about.jpg";
 import {
   ArrowLeft,
   ArrowRight,
@@ -87,18 +88,33 @@ export default function Home() {
           id="about"
           className="p-container md:py-24 lg:py-32 relative overflow-hidden"
         >
-          <div className="max-w-5xl gap-4 mx-auto p-0 sm:p-6">
-            <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl gap-8 md:gap-12 mx-auto p-0 sm:p-6">
+            <div className="max-w-5xl mx-auto mb-6 md:mb-8">
               <Ticker />
             </div>
-            <p className="w-full md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              I am a full-stack engineer and passionate product manager with
-              more than eight years of experience building a wide range of
-              digital products. I believe that truly effective digital solutions
-              come from understanding the business and the user as much as from
-              understanding technology. With this approach, I create digital
-              solutions that deliver real value and lasting impact.
-            </p>
+            <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <p className="w-full leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+                  I am a full-stack engineer and passionate product manager with
+                  more than eight years of experience building a wide range of
+                  digital products. I believe that truly effective digital
+                  solutions come from understanding the business and the user as
+                  much as from understanding technology. With this approach, I
+                  create digital solutions that deliver real value and lasting
+                  impact.
+                </p>
+              </div>
+              <div className="order-1 md:order-2 flex items-center justify-center md:justify-end">
+                <div className="relative w-full max-w-[300px] sm:max-w-[400px] aspect-square rounded-lg overflow-hidden bg-secondary shadow-lg">
+                  <OptimizedImage
+                    src={about}
+                    alt="Haydn Morris"
+                    className="h-full w-full object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 300px, 400px"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
