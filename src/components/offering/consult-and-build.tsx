@@ -7,7 +7,7 @@ const ConsultAndBuild = () => {
       icon={bulbAndGear}
       title="Consult+Build"
       subtitle="From idea to early-stage implementation"
-      description="I work with you to shape your product vision, define technical requirements, and lay the groundwork for development. Then, I help build the initial version of your product—whether it's an MVP, a proof of concept, or a scalable foundation—ensuring it aligns with your long-term goals."
+      description="I work with you to shape your product vision and define what success looks like, then build the first version using an AI-native workflow that gets you to working software quickly. Whether it's an MVP, a proof of concept, or a scalable foundation, it's built deliberately—the right thing, built safely, and ready to grow with you."
       buttonText="Build your MVP"
       services={[
         "Everything from Consult",

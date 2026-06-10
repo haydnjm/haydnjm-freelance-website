@@ -47,7 +47,8 @@ const Journey = () => {
       description: [
         <div key="implementation-1">
           <p>
-            Now the building begins.{" "}
+            Now the building begins. I work AI-native, using AI tooling to move
+            fast while keeping the code safe, tested, and scalable.{" "}
             <Highlight>
               You have full visibility into the project with regular updates and
               demos.

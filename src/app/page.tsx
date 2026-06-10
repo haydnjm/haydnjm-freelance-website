@@ -30,12 +30,14 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="font-bold text-5xl lg:text-6xl tracking-tight">
-                  Turning Ideas Into Digital Reality
+                  Building the Right Thing, the Right Way
                 </h1>
                 <p className="max-w-[600px] md:text-xl">
                   I&apos;m a freelance software engineer based in Amsterdam. I
                   specialise in bridging the gap between product vision and
-                  technical execution.
+                  technical execution. AI has made it easy to build fast&mdash;my
+                  focus is on building the <em>right</em> thing, in a way
+                  that&apos;s safe, scalable, and built to last.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -97,11 +99,13 @@ export default function Home() {
                 <p className="w-full leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                   I am a full-stack engineer and passionate product manager with
                   more than eight years of experience building a wide range of
-                  digital products. I believe that truly effective digital
-                  solutions come from understanding the business and the user as
-                  much as from understanding technology. With this approach, I
-                  create digital solutions that deliver real value and lasting
-                  impact.
+                  digital products. I work AI-native, using modern AI tooling to
+                  go from idea to working software faster than ever. But speed
+                  alone isn&apos;t the point. I believe that truly effective
+                  digital solutions come from understanding the business and the
+                  user as much as from understanding technology. That&apos;s what
+                  makes sure we build the right thing, and build it in a way
+                  that&apos;s safe and scales with you.
                 </p>
               </div>
               <div className="order-1 md:order-2 flex items-center justify-center md:justify-end">

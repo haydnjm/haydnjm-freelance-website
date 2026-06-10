@@ -7,8 +7,8 @@ const Consult = () => {
     <OfferingBlock
       icon={bulb}
       title="Consult"
-      subtitle="Get clarity on your product vision and technical strategy"
-      description="I help businesses define their digital product roadmap, refine their ideas, and determine the right technologies to bring them to life. Whether you're starting fresh or optimizing an existing product, I'll guide you through the best approach to achieve your goals efficiently."
+      subtitle="Get clarity on what to build, and why"
+      description="I help businesses define their digital product roadmap, refine their ideas, and determine the right technologies to bring them to life. AI has made it cheap to build almost anything, so the real question becomes what's actually worth building. Whether you're starting fresh or improving an existing product, I'll help you answer that before a line of code is written."
       buttonText="Expand your idea"
       services={[
         "Product roadmap definition",
