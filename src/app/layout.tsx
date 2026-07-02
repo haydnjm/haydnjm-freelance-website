@@ -121,6 +121,10 @@ export default function RootLayout({
           data-website-id="93f88c6a-c263-41bf-b46d-6cec85bd3289"
         />
       )}
+      <Script
+        src="https://www.urbino.studio/embed.js"
+        data-artisan-studio="haydns-pottery"
+      />
       <body className={`${ubuntu.variable} ${ubuntuMono.variable} antialiased`}>
         <Toaster />
         <main>
